@@ -1,0 +1,29 @@
+configuration {
+    show-icons: true;  // Activer les icônes
+    font: "Comfortaa 15";  // Police Nerd Fonts avec taille 14pt
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"  // Importer les couleurs Pywal
+
+window {
+    background-color: @background;
+    border: 1px;
+    border-radius: 10px;  // Ajouter des coins arrondis
+    location: northeast;   // Positionner en haut à droite
+    anchor: northeast;    // Ancrer en haut à droite
+    width: 400px;         // Largeur fixe pour une meilleure apparence
+    transparency: "real";
+    y-offset: 35px;   // Décaler de 10px vers le bas
+    x-offset: -8px;
+}
+
+listview {
+    lines: 3;      // Nombre de lignes visibles
+    columns: 1;    // Deux colonnes
+}
+
+element {
+    padding: 5px;  // Espacement interne des éléments
+    border-radius: 8px;
+    border: 2px ;
+}

@@ -2,7 +2,7 @@
 
 #met tout ce que tu veut ajouter avec un !connard
 #
-!/.gitignore
+!.gitignore
 !/README.md
 
-!/rofi/*
+!/rofi/**

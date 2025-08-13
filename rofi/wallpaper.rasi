@@ -1,0 +1,72 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "Comfortaa 12";
+}
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+element-icon {
+    size: 120px; /* Augmente la taille des icônes */
+    border: 2px;
+    border-radius: 400px;
+    padding: 0px;
+    margin: -30px 0px -30px 0px;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    width: 1000px;
+    height: 500px;
+    location: center;
+    border: 4px;
+    border-radius: 15px;
+    background-color:@background ;  // 50% de transparence #00000080
+    transparency: "real";
+    padding: 15px; /* Espace autour du contenu de la fenêtre */
+}
+element {
+    padding: 2px;
+    text-color: @active-background;
+    background-color:  #00000080;
+    border-radius: 8px;
+    border: 2px ;
+}
+element-text {
+    text-color: @active-background;
+    horizontal-align: 0.5; /* Centre le texte horizontalement */
+    vertical-align: 0.5; /* Centre verticalement (si supporté) */
+    border: 3px;
+    border-radius: 25px;
+    enabled: false; /* This will hide the wallpaper titles */
+}
+#listview {
+    border-color: @border-color;
+    scrollbar: true;
+    padding: 0px;
+    spacing: 10px; /* Espace entre les éléments */
+    columns: 3; /* Ajoute 2 colonnes */
+    border: 3px;
+    border-radius: 20px;
+    lines: 10;
+}
+#textbox {
+    text-color: @foreground;
+     border: 9px;
+    border-radius: 10px;
+    vertical-align: 0.5; /* Centre verticalement (si supporté) */
+}
+#inputbar {
+    padding: 3px;
+    border-radius: 8px;
+    background-color: @urgent-background;
+    text-color: @urgent-background;
+    width: 200px;
+    vertical-align: 0.5; /* Centre verticalement (si supporté) */
+}
+#entry {
+    padding: 5px;
+    text-color: @selected-urgent-background;
+    expand: true;
+}
