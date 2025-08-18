@@ -1,0 +1,56 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    font: "Comfortaa 45";
+}
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+element-icon {
+    size: 0px; /* Augmente la taille des icônes */
+    border: 0px;
+}
+
+window {
+    width: 800px;
+    height: 250px;
+    location: center;
+    border: 4px;
+    border-radius: 15px;
+    background-color:@background ;  // 50% de transparence #00000080
+    transparency: "real";
+    padding: 15px; /* Espace autour du contenu de la fenêtre */
+}
+
+#listview {
+    border-color: @border-color;
+    scrollbar: true;
+    padding: 0px;
+    spacing: 10px; /* Espace entre les éléments */
+    columns: 3; /* Ajoute 2 colonnes */
+    border: 3px;
+    border-radius: 20px;
+    lines: 10;
+}
+
+element {
+    padding: 10px;
+    text-color: @active-background;
+    background-color:  #00000080;
+    border-radius: 8px;
+    border: 2px ;
+}
+
+element-text {
+    text-color: @active-background;
+    horizontal-align: 0.45; /* Centre le texte horizontalement */
+    vertical-align: 0.45; /* Centre verticalement (si supporté) */
+    border: 9px;
+    border-radius: 50px;
+    }
+
+mainbox {
+    layout: horizontal; /* Aligns elements horizontally */
+    spacing: 10px; /* Space between elements */
+    horizontal-align: 0.45; /* Centre le texte horizontalement */
+    vertical-align: 0.45; /* Centre verticalement (si supporté) */
+}
