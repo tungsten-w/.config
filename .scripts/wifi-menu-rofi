@@ -1,0 +1,50 @@
+#!/bin/bash
+# Menu Wi-Fi Rofi avec icônes pour état : connecté, connu, inconnu
+
+# Icônes (Nerd Font / Font Awesome)
+ICON_CONNECTED="󱚽"   # Wi-Fi + check
+ICON_KNOWN="󰖩"         # Cœur
+ICON_UNKNOWN="󱚿"       # Wi-Fi simple
+
+# Récupérer le SSID actuel
+CURRENT_SSID=$(nmcli -t -f ACTIVE,SSID dev wifi list | grep '^yes' | cut -d: -f2)
+
+# Liste des connexions connues
+KNOWN_SSIDS=$(nmcli -t -f NAME connection show | sort -u)
+
+# Lister les réseaux Wi-Fi détectés
+NETWORKS=$(nmcli -t -f SSID dev wifi list | grep -v '^$' | sort -u)
+
+# Construire la liste avec icônes
+MENU=""
+while read -r SSID; do
+    if [ "$SSID" = "$CURRENT_SSID" ]; then
+        MENU+="$ICON_CONNECTED  $SSID\n"
+    elif echo "$KNOWN_SSIDS" | grep -Fxq "$SSID"; then
+        MENU+="$ICON_KNOWN  $SSID\n"
+    else
+        MENU+="$ICON_UNKNOWN  $SSID\n"
+    fi
+done <<< "$NETWORKS"
+
+# Afficher le menu dans Rofi
+CHOSEN=$(echo -e "$MENU" | rofi -dmenu -i -p "Wi-Fi  ")
+[ -z "$CHOSEN" ] && exit
+# Extraire le SSID (supprimer l'icône et espaces)
+SSID=$(echo "$CHOSEN" | sed 's/^[^ ]*  //')
+
+# Si réseau actuel → proposer déconnexion
+if [ "$SSID" = "$CURRENT_SSID" ]; then
+    CONFIRM=$(echo -e "Oui\nNon" | rofi -dmenu -i -p "Déconnecter de '$SSID' ?")
+    [ "$CONFIRM" = "Oui" ] && nmcli connection down "$SSID" && notify-send "Wi-Fi" "Déconnecté de $SSID"
+    exit
+fi
+
+# Si le réseau est connu → connexion directe
+if echo "$KNOWN_SSIDS" | grep -Fxq "$SSID"; then
+    nmcli connection up "$SSID" && notify-send "Wi-Fi" "Connecté à $SSID"
+else
+    PASS=$(rofi -dmenu -password -p "Mot de passe pour '$SSID' :")
+    [ -z "$PASS" ] && exit
+    nmcli dev wifi connect "$SSID" password "$PASS" && notify-send "Wi-Fi" "Connecté à $SSID"
+fi

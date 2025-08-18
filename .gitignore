@@ -24,3 +24,7 @@
 !/sctipts/**
 !/sctipts/*
 !/sctipts/
+
+!/.scripts/**
+!/.scripts/*
+!/.scripts/
