@@ -1,0 +1,92 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.matugen": true,
+  "theme.matugen_settings.mode": "dark",
+  "wallpaper.enable": false,
+  "wallpaper.image": "/tmp/caca.png",
+  "theme.font.name": "Comfortaa",
+  "theme.font.label": "Comfortaa Medium",
+  "theme": "light",
+  "general": {
+    "matugen_theme": "light"
+  },
+  "menus.media.hideAuthor": true,
+  "menus.media.hideAlbum": true,
+  "menus.media.displayTime": true,
+  "theme.bar.menus.opacity": 90,
+  "theme.bar.transparent": true,
+  "theme.osd.orientation": "horizontal",
+  "theme.osd.location": "top",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "cpu",
+        "ram",
+        "cputemp",
+        "storage",
+        "windowtitle"
+      ],
+      "middle": [
+        "workspaces",
+        "media",
+        "cava"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "hyprsunset",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media",
+        "cava"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.border.location": "none",
+  "theme.bar.floating": false,
+  "theme.bar.location": "top",
+  "bar.customModules.cava.bars": 18,
+  "theme.bar.buttons.workspaces.enableBorder": true,
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.show_icons": true,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "bar.workspaces.applicationIconOncePerWorkspace": true
+}

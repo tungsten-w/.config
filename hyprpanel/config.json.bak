@@ -1,0 +1,12 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.matugen": true,
+  "theme.matugen_settings.mode": "dark",
+  "wallpaper.enable": false,
+  "wallpaper.image": "/tmp/caca.png",
+  "theme.font.name": "Comfortaa",
+  "theme.font.label": "Comfortaa Medium",
+  "theme": "light"
+}

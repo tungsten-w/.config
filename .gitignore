@@ -28,3 +28,7 @@
 !/.scripts/**
 !/.scripts/*
 !/.scripts/
+
+!/hyprpanel/**
+!/hyprpanel/*
+!/hyprpanel/
