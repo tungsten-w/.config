@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#eww open logo
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/dark"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
@@ -77,12 +77,19 @@ else
     exit 1
 fi
 
-
 cp $WALLPAPER /tmp/caca.png
-# Relancer HyprPanel pour appliquer les nouvelles couleurs
+
+#eww close-all
+
+#mettre hyprpanel en mode dark
+# Passe le matugen en mode sombre
+HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
+
+jq '.["theme.matugen_settings.mode"]="dark"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
+
+
 hyprpanel -q
-sleep 0.5  # Petit délai pour s'assurer que le processus est bien arrêté
-hyprpanel&
+hyprpanel &
 
 
 # Relancer ulauncher

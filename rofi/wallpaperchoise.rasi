@@ -15,8 +15,8 @@ window {
     height: 250px;
     location: center;
     border: 4px;
-    border-radius: 15px;
-    background-color:@background ;  // 50% de transparence #00000080
+    border-radius: 20px;
+
     transparency: "real";
     padding: 15px; /* Espace autour du contenu de la fenêtre */
 }
