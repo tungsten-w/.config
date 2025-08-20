@@ -3,7 +3,7 @@
     "/"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
@@ -18,7 +18,7 @@
   "theme.bar.menus.opacity": 90,
   "theme.bar.transparent": true,
   "theme.osd.orientation": "horizontal",
-  "theme.osd.location": "top",
+  "theme.osd.location": "bottom",
   "bar.layouts": {
     "0": {
       "left": [
