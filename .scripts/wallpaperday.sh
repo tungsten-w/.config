@@ -31,7 +31,7 @@ swww img "$WALLPAPER" --transition-type any --transition-fps 60
 ln -sf "$WALLPAPER" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
 # Appliquer les couleurs avec pywal
-wal -i "$WALLPAPER" -q
+wal -i "$WALLPAPER" -l -q
 if [ $? -eq 0 ]; then
     echo "Couleurs pywal appliquées avec succès : $WALLPAPER"
 else
