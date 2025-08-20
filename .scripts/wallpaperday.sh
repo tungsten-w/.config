@@ -42,9 +42,14 @@ fi
 # Copie dans /tmp (si utile)
 cp "$WALLPAPER" /tmp/caca.png
 
-# Relancer HyprPanel
+#mettre hyprpanel en mode light
+# Passe le matugen en mode clair
+HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
+
+jq '.["theme.matugen_settings.mode"]="light"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
+
+
 hyprpanel -q
-sleep 0.5
 hyprpanel &
 
 # Relancer ulauncher

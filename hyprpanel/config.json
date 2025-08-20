@@ -3,7 +3,7 @@
     "/"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
@@ -88,5 +88,7 @@
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
-  "bar.workspaces.applicationIconOncePerWorkspace": true
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "theme.bar.buttons.style": "default",
+  "menus.media.displayTimeTooltip": false
 }
