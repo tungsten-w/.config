@@ -32,3 +32,11 @@
 !/hyprpanel/**
 !/hyprpanel/*
 !/hyprpanel/
+
+!/waybar/**
+!/waybar/*
+!/waybar/
+
+!/hyprlock/**
+!/hyprlock/*
+!/hyprlock/

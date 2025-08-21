@@ -1,0 +1,132 @@
+@import url("/home/tungsten/.cache/wal/colors-waybar.css");
+/* Style général */
+* {
+    font-family: "FiraCode Nerd Font", "Comfortaa", sans-serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 7px;
+    padding: 0 4px;
+    transition: all 0.3s ease;
+}
+
+/* Style de la barre principale */
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+    border-bottom: 0px solid @color1;
+}
+
+/* Style des workspaces */
+#workspaces button {
+    color: @color14;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour lisibilité */
+    border: 2px solid @color1; /* Contour autour des workspaces */
+}
+
+#workspaces button.focused {
+    background-color: @color1;
+    color: @color15;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background-color: @color2;
+    color: @color15;
+}
+
+/* Style des modules */
+#clock,
+#cpu,
+#memory,
+#temperature,
+#fan,
+#battery,
+#pulseaudio,
+#network {
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#gpu:hover,
+#temperature:hover,
+#fan:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover {
+    background-color: @color3;
+    color: @foreground;
+}
+/* Style spécifique pour CAVA */
+#cava {
+    color: @foreground;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-icon {
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid @color1;
+    border-radius: 5px;
+}
+
+#custom_icon:hover {
+    background-color: @color3;
+    border: 2px solid @color3;
+}
+#custom-weather {
+    padding: 0 1px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-gpu_usage {
+    padding: 0 1px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-hyprsunset {
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-fan {
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-cpu_temp {
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-protonvpn.connected {
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}
+#custom-protonvpn.disconnected {
+    padding: 0 7px;
+    margin: 0 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-opaque pour contraste */
+    border: 2px solid @color1; /* Contour autour de chaque module */
+}

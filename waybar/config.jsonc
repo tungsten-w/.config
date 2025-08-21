@@ -1,0 +1,125 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": [
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "custom/gpu_usage",
+    "custom/fan",
+    "custom/cpu_temp",
+    "custom/music",
+  ],
+  "modules-center": ["clock", "cava"],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "custom/weather",
+    "network",
+    "custom/hyprsunset",
+    "custom/icon",
+  ],
+  "hyprland/workspaces": {
+    "format": "{name}",
+  },
+  "custom/icon": {
+    "exec": "~/.config/waybar/icon.sh",
+    "return-type": "json",
+    "interval": 0,
+    "tooltip": "Mon icône personnalisée",
+    "on-click": ".scripts/powermenu.sh",
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+  },
+  "battery": {
+    "format": "󰄌 {capacity}% {icon}",
+    "format-charging": "󰂄 {capacity}%",
+  },
+  "pulseaudio": {
+    "format": " {volume}% {icon}",
+    "on-click": "~/.scripts/rofi-audio-output.sh",
+    "on-click-right": "qpwgraph",
+  },
+  "network": {
+    "format": "",
+    "format-disconnected": "󱛅",
+    "tooltip": "Menu Wi-Fi",
+    "on-click": "~/.scripts/wifi-menu-rofi",
+  },
+  "cpu": {
+    "format": " {usage}% {icon}",
+    "tooltip": "CPU Usage",
+  },
+  "memory": {
+    "format": "󱦘 {used:0.1f}GiB / {total:0.1f}GiB",
+    "tooltip": "Memory Usage",
+  },
+  "fan": {
+    "exec": "/usr/bin/sensors | grep -oP 'fan1:\\s+\\K\\d+'",
+    "return-type": "json",
+    "format": " {output} RPM",
+    "interval": 2,
+    "tooltip": "Fan Speed",
+  },
+  "cava": {
+    "framerate": 90,
+    "autosens": 1,
+    "bars": 18,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pipewire",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "input_delay": 0,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "interval": 900,
+    "format": "{}",
+    "tooltip": false,
+  },
+  "custom/gpu_usage": {
+    "exec": "~/.config/waybar/scripts/amdgpu_usage.sh", // ton script
+    "interval": 5, // rafraîchissement en secondes
+    "return-type": "text", // Waybar affiche tel quel
+    "format": "{}", // pas de préfixe ni suffixe
+  },
+  "custom/hyprsunset": {
+    "exec": "~/.local/bin/hyprsunset-toggle",
+    "interval": 3600,
+    "on-click": "~/.local/bin/hyprsunset-toggle toggle",
+  },
+  "custom/fan": {
+    "format": "{}",
+    "interval": 10,
+    "exec": "~/.scripts/fan_rpm.sh",
+    "return-type": "json",
+  },
+  "custom/cpu_temp": {
+    "format": "{}",
+    "exec": "~/.scripts/cpu_temp.sh",
+    "interval": 10,
+  },
+  "custom/music": {
+    "format": "♫",
+    "exec": "cat /tmp/current_song.json | jq -r '.track.title'",
+    "return-type": "json",
+    "on-click": ".scripts/reconize_song.sh",
+    "tooltip": "Cliquez pour reconnaître la musique jouée",
+  },
+  "custom/protonvpn": {
+    "exec": "~/.config/waybar/scripts/protonvpn-status.sh",
+    "interval": 5,
+    "return-type": "json",
+    "on-click": "~/.config/waybar/scripts/protonvpn-toggle.sh",
+  },
+}

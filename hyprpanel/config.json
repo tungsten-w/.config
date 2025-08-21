@@ -1,6 +1,7 @@
 {
   "bar.customModules.storage.paths": [
-    "/"
+    "/",
+    "/mnt/ssd2/"
   ],
   "theme.matugen": true,
   "theme.matugen_settings.mode": "dark",
@@ -13,9 +14,9 @@
     "matugen_theme": "light"
   },
   "menus.media.hideAuthor": true,
-  "menus.media.hideAlbum": true,
-  "menus.media.displayTime": true,
-  "theme.bar.menus.opacity": 90,
+  "menus.media.hideAlbum": false,
+  "menus.media.displayTime": false,
+  "theme.bar.menus.opacity": 100,
   "theme.bar.transparent": true,
   "theme.osd.orientation": "horizontal",
   "theme.osd.location": "bottom",
@@ -90,5 +91,25 @@
   "bar.workspaces.numbered_active_indicator": "highlight",
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "theme.bar.buttons.style": "default",
-  "menus.media.displayTimeTooltip": false
+  "menus.media.displayTimeTooltip": false,
+  "bar.launcher.icon": "",
+  "menus.clock.weather.location": "Paris",
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": false,
+  "bar.customModules.hyprsunset.temperature": "3500k",
+  "bar.customModules.hyprsunset.offLabel": "",
+  "bar.customModules.hyprsunset.onLabel": "",
+  "bar.customModules.hyprsunset.onIcon": "󰖚",
+  "bar.customModules.hyprsunset.offIcon": "",
+  "menus.dashboard.powermenu.avatar.image": "/tmp/caca.png",
+  "theme.bar.menus.menu.dashboard.profile.size": "20em",
+  "theme.bar.menus.menu.dashboard.profile.radius": "2em",
+  "menus.dashboard.stats.enable_gpu": true,
+  "theme.bar.opacity": 100,
+  "theme.bar.buttons.opacity": 90,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "HTOP",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "ghostty htop",
+  "bar.customModules.storage.labelType": "used/total",
+  "bar.customModules.storage.tooltipStyle": "percentage-bar"
 }
