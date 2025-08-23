@@ -40,3 +40,11 @@
 !/hyprlock/**
 !/hyprlock/*
 !/hyprlock/
+
+!/nvim/**
+!/nvim/*
+!/nvim/
+
+!/nvim,bak/**
+!/nvim.bak/*
+!/nvim.bak/
