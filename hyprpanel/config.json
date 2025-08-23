@@ -4,7 +4,7 @@
     "/mnt/ssd2/"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
@@ -99,8 +99,8 @@
   "bar.customModules.hyprsunset.temperature": "3500k",
   "bar.customModules.hyprsunset.offLabel": "",
   "bar.customModules.hyprsunset.onLabel": "",
-  "bar.customModules.hyprsunset.onIcon": "󰖚",
-  "bar.customModules.hyprsunset.offIcon": "",
+  "bar.customModules.hyprsunset.onIcon": " 󰖚",
+  "bar.customModules.hyprsunset.offIcon": " ",
   "menus.dashboard.powermenu.avatar.image": "/tmp/caca.png",
   "theme.bar.menus.menu.dashboard.profile.size": "20em",
   "theme.bar.menus.menu.dashboard.profile.radius": "2em",
@@ -111,5 +111,8 @@
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "HTOP",
   "menus.dashboard.shortcuts.left.shortcut1.command": "ghostty htop",
   "bar.customModules.storage.labelType": "used/total",
-  "bar.customModules.storage.tooltipStyle": "percentage-bar"
+  "bar.customModules.storage.tooltipStyle": "percentage-bar",
+  "menus.volume.raiseMaximumVolume": true,
+  "theme.bar.background": "#bf3f3f",
+  "theme.bar.buttons.enableBorders": true
 }
