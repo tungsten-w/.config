@@ -12,4 +12,4 @@ git commit -m "Auto-commit: $(date '+%Y-%m-%d %H:%M:%S')"
 git push
 
 #dire que c ok
-/usr/bin/notify-send "Config Backup" "Ton ~/.config a été push avec succès ✅"
+/usr/bin/notify-send "Config Backup" " Ta config a été ajoutée a github "
