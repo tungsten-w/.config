@@ -94,3 +94,6 @@ hyprpanel &
 
 # Relancer ulauncher
 pkill -f ulauncher
+
+TARGET_DIR="~/.config/.scripts/
+./convert_wallpapers.sh

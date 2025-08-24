@@ -54,3 +54,5 @@ hyprpanel &
 
 # Relancer ulauncher
 pkill -f ulauncher
+
+./convert_wallpapers.sh
