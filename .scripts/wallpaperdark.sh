@@ -94,3 +94,7 @@ hyprpanel &
 
 # Relancer ulauncher
 pkill -f ulauncher
+
+pkill obsidian
+OBSIDIAN_CONF="$HOME/Documents/Obsidian Vault/.obsidian/app.json"
+jq '.baseTheme = "dark"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"

@@ -90,3 +90,6 @@ hyprpanel -q
 hyprpanel &
 # Relancer ulauncher
 pkill -f ulauncher
+
+pkill obsidian
+jq '.baseTheme = "light"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"
