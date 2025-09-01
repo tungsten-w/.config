@@ -1,29 +1,61 @@
 configuration {
-    show-icons: true;  // Activer les icônes
-    font: "Comfortaa 15";  // Police Nerd Fonts avec taille 14pt
+    modi: "drun,run";
+    show-icons: true;
+    font: "Comfortaa 45";
 }
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
-@import "~/.cache/wal/colors-rofi-dark.rasi"  // Importer les couleurs Pywal
+element-icon {
+    size: 0px; /* Augmente la taille des icônes */
+    border: 0px;
+}
 
 window {
-    background-color: @background;
-    border: 1px;
-    border-radius: 10px;  // Ajouter des coins arrondis
-    location: northeast;   // Positionner en haut à droite
-    anchor: northeast;    // Ancrer en haut à droite
-    width: 400px;         // Largeur fixe pour une meilleure apparence
+    width: 800px;
+    height: 250px;
+    location: center;
+    border: 0px;
+    border-radius: 20px;
+
     transparency: "real";
-    y-offset: 35px;   // Décaler de 10px vers le bas
-    x-offset: -8px;
+     padding: 15px; /* Espace autour du contenu de la fenêtre */
+
 }
 
-listview {
-    lines: 3;      // Nombre de lignes visibles
-    columns: 1;    // Deux colonnes
+#listview {
+    border-color: @border-color;
+    scrollbar: false;
+    padding: 0px;
+    spacing: 20px; /* Espace entre les éléments */
+    columns: 4; /* Ajoute 2 colonnes */
+    border: 3px;
+    border-radius: 20px;
+    lines: 10;
 }
 
 element {
-    padding: 5px;  // Espacement interne des éléments
+    padding: 10px;
+    text-color: @active-background;
+    background-color:  #00000080;
     border-radius: 8px;
     border: 2px ;
+}
+
+element-text {
+    text-color: @active-background;
+    horizontal-align: 0.45; /* Centre le texte horizontalement */
+    vertical-align: 0.45; /* Centre verticalement (si supporté) */
+    border: 9px;
+    border-radius: 50px;
+    }
+
+mainbox {
+    layout: horizontal; /* Aligns elements horizontally */
+    spacing: 10px; /* Space between elements */
+    horizontal-align: 0.45; /* Centre le texte horizontalement */
+    vertical-align: 0.45; /* Centre verticalement (si supporté) */
+}
+
+element selected {
+
 }
