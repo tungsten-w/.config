@@ -24,6 +24,7 @@
     "0": {
       "left": [
         "dashboard",
+        "custom/pc_status",
         "cpu",
         "ram",
         "cputemp",
@@ -48,6 +49,7 @@
     "1": {
       "left": [
         "dashboard",
+        "custom/pc_status",
         "cpu",
         "ram",
         "cputemp",
@@ -122,7 +124,7 @@
   "bar.customModules.storage.labelType": "used/total",
   "bar.customModules.storage.round": false,
   "bar.customModules.hyprsunset.temperature": "3000k",
-  "bar.customModules.hyprsunset.onIcon": "󰖚",
+  "bar.customModules.hyprsunset.onIcon": "󰖐",
   "bar.customModules.hyprsunset.offIcon": "",
   "bar.customModules.hyprsunset.label": false,
   "menus.clock.time.military": true,
@@ -136,5 +138,6 @@
   "theme.osd.duration": 700,
   "menus.volume.raiseMaximumVolume": true,
   "theme.bar.buttons.workspaces.smartHighlight": true,
-  "bar.workspaces.showAllActive": false
+  "bar.workspaces.showAllActive": false,
+  "bar.battery.label": false
 }
