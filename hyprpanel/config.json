@@ -4,7 +4,7 @@
     "/mnt/ssd2"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "light",
+  "theme.matugen_settings.mode": "dark",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
@@ -96,7 +96,7 @@
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
-  "bar.workspaces.applicationIconOncePerWorkspace": false,
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
   "theme.bar.buttons.style": "default",
   "menus.media.displayTimeTooltip": false,
   "theme.bar.menus.enableShadow": false,
@@ -130,7 +130,7 @@
   "menus.clock.time.military": true,
   "menus.clock.weather.location": "Paris",
   "menus.clock.weather.enabled": false,
-  "bar.customModules.cava.icon": "󰌳",
+  "bar.customModules.cava.icon": "󰼁",
   "bar.network.label": false,
   "bar.bluetooth.label": false,
   "bar.customModules.cava.showActiveOnly": false,
@@ -139,5 +139,7 @@
   "menus.volume.raiseMaximumVolume": true,
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.workspaces.showAllActive": false,
-  "bar.battery.label": false
+  "bar.battery.label": false,
+  "bar.customModules.cava.showIcon": true,
+  "theme.bar.buttons.modules.cava.enableBorder": true
 }
