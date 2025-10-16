@@ -16,7 +16,7 @@
   "menus.media.hideAuthor": false,
   "menus.media.hideAlbum": false,
   "menus.media.displayTime": false,
-  "theme.bar.menus.opacity": 90,
+  "theme.bar.menus.opacity": 100,
   "theme.bar.transparent": true,
   "theme.osd.orientation": "horizontal",
   "theme.osd.location": "top right",
@@ -25,24 +25,24 @@
       "left": [
         "dashboard",
         "custom/pc_status",
-        "cpu",
-        "ram",
-        "cputemp",
-        "storage",
-        "windowtitle"
-      ],
-      "middle": [
+        "clock",
         "workspaces",
-        "media",
         "cava"
       ],
+      "middle": [
+        "media"
+      ],
       "right": [
+        "cpu",
+        "ram",
+        "storage",
+        "cputemp",
+        "windowtitle",
         "volume",
         "network",
         "bluetooth",
         "battery",
         "hyprsunset",
-        "clock",
         "notifications"
       ]
     },
@@ -62,13 +62,14 @@
         "cava"
       ],
       "right": [
+        "weather",
         "volume",
         "network",
         "bluetooth",
         "battery",
         "hyprsunset",
-        "clock",
-        "notifications"
+        "notifications",
+        "clock"
       ]
     },
     "2": {
@@ -92,7 +93,7 @@
   "bar.workspaces.monitorSpecific": false,
   "bar.workspaces.show_icons": true,
   "bar.workspaces.show_numbered": false,
-  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.workspaceMask": true,
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
@@ -114,7 +115,7 @@
   "bar.windowtitle.custom_title": true,
   "bar.windowtitle.class_name": true,
   "bar.windowtitle.icon": true,
-  "bar.windowtitle.label": true,
+  "bar.windowtitle.label": false,
   "menus.dashboard.powermenu.avatar.image": "/tmp/caca.png",
   "theme.bar.menus.menu.dashboard.profile.size": "20em",
   "theme.bar.menus.menu.dashboard.profile.radius": "2em",
@@ -128,8 +129,8 @@
   "bar.customModules.hyprsunset.offIcon": "",
   "bar.customModules.hyprsunset.label": false,
   "menus.clock.time.military": true,
-  "menus.clock.weather.location": "Paris",
-  "menus.clock.weather.enabled": false,
+  "menus.clock.weather.location": "lunel",
+  "menus.clock.weather.enabled": true,
   "bar.customModules.cava.icon": "󰼁",
   "bar.network.label": false,
   "bar.bluetooth.label": false,
@@ -141,5 +142,30 @@
   "bar.workspaces.showAllActive": false,
   "bar.battery.label": false,
   "bar.customModules.cava.showIcon": true,
-  "theme.bar.buttons.modules.cava.enableBorder": true
+  "theme.bar.buttons.modules.cava.enableBorder": true,
+  "menus.clock.weather.key": "9fe9cb74e9f94d418ed85243250810",
+  "menus.clock.weather.unit": "metric",
+  "bar.autoHide": "never",
+  "theme.bar.layer": "top",
+  "bar.customModules.storage.tooltipStyle": "percentage-bar",
+  "bar.customModules.cava.framerate": 70,
+  "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
+  "menus.dashboard.directories.enabled": true,
+  "menus.dashboard.shortcuts.left.shortcut1.command": "brave",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Brave",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "󰼁",
+  "menus.dashboard.shortcuts.right.shortcut1.icon": "󰣳",
+  "menus.dashboard.shortcuts.right.shortcut1.command": "ghosty",
+  "menus.dashboard.shortcuts.right.shortcut1.tooltip": "server",
+  "menus.dashboard.shortcuts.right.shortcut3.tooltip": "terminal",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "ghostty",
+  "menus.dashboard.shortcuts.right.shortcut3.icon": "󰊠",
+  "theme.matugen_settings.variation": "standard_1",
+  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "menus.dashboard.stats.enabled": true,
+  "menus.dashboard.shortcuts.left.shortcut4.icon": "󰓓",
+  "menus.dashboard.shortcuts.left.shortcut4.tooltip": "steam",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "steam",
+  "menus.media.noMediaText": "No Media Currently Playing"
 }
