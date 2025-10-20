@@ -12,10 +12,10 @@ case "$CHOIX" in
         ;;
         "󱠃")
                 HEURE=$(date +"%H")
-                if [ "$HEURE" -ge 10 ] && [ "$HEURE" -lt 19 ]; then
+                if [ "$HEURE" -ge 10 ] && [ "$HEURE" -lt 18 ]; then
                     # Jour
                     ~/.config/.scripts/wallpaperday.sh
-                elif [ "$HEURE" -ge 19 ] && [ "$HEURE" -lt 22 ]; then
+                elif [ "$HEURE" -ge 18 ] && [ "$HEURE" -lt 22 ]; then
                     # Coucher de soleil
                     ~/.config/.scripts/wallpapersunset.sh
                 elif [ "$HEURE" -ge 5 ] && [ "$HEURE" -lt 10 ]; then
