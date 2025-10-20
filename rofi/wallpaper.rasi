@@ -4,7 +4,6 @@ configuration {
     icon-theme: "Papirus";
     font: "Comfortaa 12";
 }
-@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 element-icon {
     size: 120px; /* Augmente la taille des icônes */

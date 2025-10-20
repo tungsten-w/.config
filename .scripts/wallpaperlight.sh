@@ -1,5 +1,5 @@
 #!/bin/bash
-#eww open logo
+nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/light"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
@@ -91,5 +91,11 @@ hyprpanel &
 # Relancer ulauncher
 pkill -f ulauncher
 
-pkill obsidian
-jq '.baseTheme = "light"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"
+#pkill obsidian
+#jq '.baseTheme = "light"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"
+
+input="/tmp/caca.png"
+outpute="/tmp/cacae.png"
+output="/tmp/cacae.png"
+magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
+magick "$input" -resize 30% "$outpute" || { echo "magick a échoué"; exit 1; }

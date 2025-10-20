@@ -1,5 +1,6 @@
 #!/bin/bash
 #eww open logo
+nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/dark"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
@@ -94,6 +95,8 @@ hyprpanel &
 
 # Relancer ulauncher
 pkill -f ulauncher
+
+
 
 #pkill obsidian
 #OBSIDIAN_CONF="$HOME/Documents/Obsidian Vault/.obsidian/app.json"
