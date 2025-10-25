@@ -86,16 +86,32 @@ HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
 jq '.["theme.matugen_settings.mode"]="light"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
 
 
+rm -f /tmp/cacae-0.png
+
+
+# Créer une version PNG du fond d'écran
+INPUT="$WALLPAPER"
+TMP_MAIN="/tmp/caca.png"
+TMP_SMALL="/tmp/cacae.png"
+
+# Si c'est un GIF, ne prendre que la première frame
+if [[ "$INPUT" =~ \.gif$ ]]; then
+    magick "$INPUT[0]" "$TMP_MAIN" || { echo "Erreur conversion GIF -> PNG"; exit 1; }
+else
+    cp "$INPUT" "$TMP_MAIN"
+fi
+
+# Redimensionner les images PNG
+magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
+magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
+
+
 hyprpanel -q
 hyprpanel &
 # Relancer ulauncher
 pkill -f ulauncher
 
-#pkill obsidian
-#jq '.baseTheme = "light"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"
 
-input="/tmp/caca.png"
-outpute="/tmp/cacae.png"
-output="/tmp/cacae.png"
-magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
-magick "$input" -resize 30% "$outpute" || { echo "magick a échoué"; exit 1; }
+pkill -f -i obsidian || pkill -f "flatpak run md.obsidian.Obsidian" || true; sleep 0.5
+VAULT_APP="$HOME/Documents/Obsidian Vault/.obsidian/app.json"; VAULT_APPEAR="$HOME/Documents/Obsidian Vault/.obsidian/appearance.json"
+jq '.baseTheme = "light"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "moonstone"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR" && nohup flatpak run md.obsidian.Obsidian >/dev/null 2>&1 & disown || nohup obsidian >/dev/null 2>&1 & disown

@@ -17,7 +17,8 @@
         "dashboard",
         "custom/pc_status",
         "clock",
-        "workspaces"
+        "workspaces",
+        "cava"
       ],
       "middle": [
         "media"
@@ -27,8 +28,8 @@
         "ram",
         "storage",
         "cputemp",
-        "windowtitle",
         "volume",
+        "windowtitle",
         "network",
         "bluetooth",
         "battery",
@@ -48,7 +49,8 @@
       ],
       "middle": [
         "workspaces",
-        "media"
+        "media",
+        "cava"
       ],
       "right": [
         "weather",
@@ -65,7 +67,8 @@
       "left": [
         "dashboard",
         "volume",
-        "microphone"
+        "microphone",
+        "cava"
       ],
       "middle": [],
       "right": [
@@ -141,9 +144,9 @@
   "menus.dashboard.shortcuts.left.shortcut4.icon": "󰓓",
   "menus.dashboard.shortcuts.left.shortcut4.command": "steam",
   "menus.dashboard.shortcuts.left.shortcut4.tooltip": "steam",
-  "menus.dashboard.shortcuts.right.shortcut3.icon": "󰣳",
-  "menus.dashboard.shortcuts.right.shortcut3.command": "nas",
-  "menus.dashboard.shortcuts.right.shortcut3.tooltip": "ghostty",
+  "menus.dashboard.shortcuts.right.shortcut3.icon": "󱓧",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "obsidian",
+  "menus.dashboard.shortcuts.right.shortcut3.tooltip": "obsidian",
   "menus.dashboard.shortcuts.right.shortcut1.icon": "󰟡",
   "menus.dashboard.shortcuts.right.shortcut1.command": "citron",
   "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Nintendo emu",
@@ -155,5 +158,7 @@
   "theme.font.size": "1.2rem",
   "bar.workspaces.showAllActive": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
-  "theme.bar.buttons.workspaces.smartHighlight": true
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.customModules.cava.icon": "󰎄",
+  "bar.customModules.cava.bars": 18
 }

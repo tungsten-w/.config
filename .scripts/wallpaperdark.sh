@@ -89,6 +89,14 @@ HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
 jq '.["theme.matugen_settings.mode"]="dark"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
 
 
+
+
+input="/tmp/caca.png"
+outpute="/tmp/cacae.png"
+output="/tmp/cacae.png"
+magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
+magick "$input" -resize 30% "$outpute" || { echo "magick a échoué"; exit 1; }
+
 hyprpanel -q
 hyprpanel &
 
@@ -97,7 +105,6 @@ hyprpanel &
 pkill -f ulauncher
 
 
-
-#pkill obsidian
-#OBSIDIAN_CONF="$HOME/Documents/Obsidian Vault/.obsidian/app.json"
-#jq '.baseTheme = "dark"' "$OBSIDIAN_CONF" > "$OBSIDIAN_CONF.tmp" && mv "$OBSIDIAN_CONF.tmp" "$OBSIDIAN_CONF"
+pkill -f -i obsidian || pkill -f "flatpak run md.obsidian.Obsidian" || true; sleep 0.5
+VAULT_APP="$HOME/Documents/Obsidian Vault/.obsidian/app.json"; VAULT_APPEAR="$HOME/Documents/Obsidian Vault/.obsidian/appearance.json"
+jq '.baseTheme = "dark"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "obsidian"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR" && ( nohup flatpak run md.obsidian.Obsidian >/dev/null 2>&1 & ) || ( nohup obsidian >/dev/null 2>&1 & )
