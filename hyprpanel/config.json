@@ -160,5 +160,6 @@
   "bar.workspaces.numbered_active_indicator": "highlight",
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.customModules.cava.icon": "󰎄",
-  "bar.customModules.cava.bars": 18
+  "bar.customModules.cava.bars": 18,
+  "theme.bar.buttons.battery.enableBorder": false
 }

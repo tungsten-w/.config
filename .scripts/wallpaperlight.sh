@@ -105,13 +105,13 @@ fi
 magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
 magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
 
-
-hyprpanel -q
-hyprpanel &
+#Relancer HyprPanel
+#hyprpanel -q
+#hyprpanel &
 # Relancer ulauncher
 pkill -f ulauncher
 
-
+#changer le theme de obsidian en light
 pkill -f -i obsidian || pkill -f "flatpak run md.obsidian.Obsidian" || true; sleep 0.5
 VAULT_APP="$HOME/Documents/Obsidian Vault/.obsidian/app.json"; VAULT_APPEAR="$HOME/Documents/Obsidian Vault/.obsidian/appearance.json"
-jq '.baseTheme = "light"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "moonstone"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR" && nohup flatpak run md.obsidian.Obsidian >/dev/null 2>&1 & disown || nohup obsidian >/dev/null 2>&1 & disown
+jq '.baseTheme = "light"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "moonstone"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR"
