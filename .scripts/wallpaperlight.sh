@@ -106,8 +106,9 @@ magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement";
 magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
 
 #Relancer HyprPanel
-#hyprpanel -q
-#hyprpanel &
+hyprpanel -q
+hyprpanel &
+
 # Relancer ulauncher
 pkill -f ulauncher
 

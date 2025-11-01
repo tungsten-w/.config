@@ -26,7 +26,7 @@ window {
     scrollbar: true;
     padding: 0px;
     spacing: 10px; /* Espace entre les éléments */
-    columns: 3; /* Ajoute 2 colonnes */
+    columns: 2; /* Ajoute 2 colonnes */
     border: 3px;
     border-radius: 20px;
     lines: 10;
