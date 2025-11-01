@@ -1,6 +1,5 @@
 # .config
-salut voila ma config.
-elle est un peu guez pour le moment
+HELLO EVERYONE this is my hyprland and endeavour os config
 This config will be better in the future ! (>o< )
 
 HERE my rice config on a youtube video ! (ow0)
