@@ -8,7 +8,7 @@ configuration {
 element-icon {
     size: 120px; /* Augmente la taille des icônes */
     border: 2px;
-    border-radius: 400px;
+    border-radius: 100px;
     padding: 0px;
     margin: -30px 0px -30px 0px;
 }
@@ -16,12 +16,13 @@ element-icon {
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 window {
-    width: 1000px;
-    height: 500px;
+    width: 998px;
+    height: 470px;
     location: center;
-    border: 4px;
-    border-radius: 15px;
+    border: 1px;
+    border-radius: 20px;
     background-color:@background ;  // 50% de transparence #00000080
+     border-color: #ffffff;
     transparency: "real";
     padding: 15px; /* Espace autour du contenu de la fenêtre */
 }
@@ -30,14 +31,14 @@ element {
     text-color: @active-background;
     background-color:  #00000080;
     border-radius: 8px;
-    border: 2px ;
+    border: 1px ;
 }
 element-text {
     text-color: @active-background;
     horizontal-align: 0.5; /* Centre le texte horizontalement */
     vertical-align: 0.5; /* Centre verticalement (si supporté) */
-    border: 3px;
-    border-radius: 25px;
+    border: 0px;
+    border-radius: 2px;
     enabled: false; /* This will hide the wallpaper titles */
 }
 #listview {
@@ -49,23 +50,4 @@ element-text {
     border: 3px;
     border-radius: 20px;
     lines: 10;
-}
-#textbox {
-    text-color: @foreground;
-     border: 9px;
-    border-radius: 10px;
-    vertical-align: 0.5; /* Centre verticalement (si supporté) */
-}
-#inputbar {
-    padding: 3px;
-    border-radius: 8px;
-    background-color: @urgent-background;
-    text-color: @urgent-background;
-    width: 200px;
-    vertical-align: 0.5; /* Centre verticalement (si supporté) */
-}
-#entry {
-    padding: 5px;
-    text-color: @selected-urgent-background;
-    expand: true;
 }

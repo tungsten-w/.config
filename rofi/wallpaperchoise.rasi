@@ -16,20 +16,21 @@ window {
     location: center;
     border: 4px;
     border-radius: 20px;
-
+    border-color: @active-background;
     transparency: "real";
     padding: 15px; /* Espace autour du contenu de la fenêtre */
 }
 
 #listview {
     border-color: @border-color;
-    scrollbar: true;
-    padding: 0px;
+     location: center;
+    scrollbar: false;
+    padding: 1px;
     spacing: 10px; /* Espace entre les éléments */
     columns: 2; /* Ajoute 2 colonnes */
     border: 3px;
     border-radius: 20px;
-    lines: 10;
+    lines: 0;
 }
 
 element {
