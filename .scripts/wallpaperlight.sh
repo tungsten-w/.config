@@ -77,17 +77,15 @@ else
     exit 1
 fi
 
-
+# faire la copie du wallpaper actuel
 cp $WALLPAPER /tmp/caca.png
-#mettre hyprpanel en mode light
+
 # Passe le matugen en mode clair
 HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
-
 jq '.["theme.matugen_settings.mode"]="light"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
 
-
+# suprimer l'image qui casse les couilles
 rm -f /tmp/cacae-0.png
-
 
 # Créer une version PNG du fond d'écran
 INPUT="$WALLPAPER"
@@ -102,7 +100,7 @@ else
 fi
 
 # Redimensionner les images PNG
-magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
+#magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
 magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
 
 #Relancer HyprPanel

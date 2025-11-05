@@ -88,13 +88,12 @@ jq '.["theme.matugen_settings.mode"]="dark"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CON
 input="/tmp/caca.png"
 outpute="/tmp/cacae.png"
 output="/tmp/cacae.png"
-magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
+#magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
 magick "$input" -resize 30% "$outpute" || { echo "magick a échoué"; exit 1; }
 
 #Relancer HyprPanel mais finalement on en a pas besoin car matugen fait tout le taf
 hyprpanel -q
 hyprpanel &
-
 
 # Relancer ulauncher
 pkill -f ulauncher
