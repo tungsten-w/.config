@@ -4,7 +4,7 @@
     "/mnt/ssd2"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
@@ -161,5 +161,6 @@
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.customModules.cava.icon": "󰎄",
   "bar.customModules.cava.bars": 18,
-  "theme.bar.buttons.battery.enableBorder": false
+  "theme.bar.buttons.battery.enableBorder": false,
+  "wallpaper.pywal": false
 }
