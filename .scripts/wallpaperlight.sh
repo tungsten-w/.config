@@ -24,10 +24,11 @@ fi
 while IFS= read -r img; do
     base_name=$(basename "${img%.*}")
     thumb="$THUMBNAIL_DIR/$base_name.png"
-    if [ ! -f "$thumb" ]; then
-        convert "$img[0]" -resize 100x100 "$thumb" 2>/dev/null \
-            || echo "Erreur de conversion pour $img"
+    if [ ! -f "$thumb" ] || [ "$thumb" -ot "$img" ]; then
+        magick "$img[0]" -thumbnail 100x100\> -strip "$thumb" 2>/dev/null \
+            || echo "Erreur création vignette pour $img"
     fi
+
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
 
@@ -64,9 +65,6 @@ fi
 
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
-
-# Mettre à jour le lien symbolique pour HyprPanel
-ln -sf "$WALLPAPER" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -l -q
