@@ -5,7 +5,6 @@ This config will be better in the future ! ( • ̀ω•́ )✧
 
 
 HERE my rice config on a youtube video !
- Λ  Λ
 (>⩊<)੭
 https://youtu.be/sOuPnnDND1Y
 
