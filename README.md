@@ -15,6 +15,8 @@ HERE some screenshots !
 
 ![image alt](https://github.com/tungsten-w/.config/blob/de5387abac39d41071bfa545f71d1e0864496806/2025-11-11-200226_hyprshot.png)
 
+![image alt](https://github.com/tungsten-w/.config/blob/de5387abac39d41071bfa545f71d1e0864496806/2025-11-11-200226_hyprshot.png)
+
 
 
 
