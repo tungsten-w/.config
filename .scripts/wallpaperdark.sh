@@ -1,5 +1,5 @@
 #!/bin/bash
-#eww open logo
+#ouvre le wallpaper actuel en image
 nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/dark"
@@ -29,6 +29,7 @@ while IFS= read -r img; do
         convert "$img[0]" -resize 100x100 "$thumb" 2>/dev/null \
             || echo "Erreur de conversion pour $img"
     fi
+
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
 
@@ -43,7 +44,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "Sélectionner un fond d'écran" \
+done | rofi -dmenu -p "~ Select a wallpaper ~   " \
            -show-icons -icon-theme "Papirus" \
            -theme ~/.config/rofi/wallpaper.rasi)
 
@@ -56,18 +57,8 @@ fi
 # Reconstruire le chemin complet de l'image sélectionnée
 WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 
-# Vérifier si swww-daemon est en cours d'exécution
-if ! pgrep -x "swww-daemon" > /dev/null; then
-    echo "Démarrage de swww-daemon..."
-    swww-daemon &
-    sleep 1  # Attendre que le démon démarre
-fi
-
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
-
-# Mettre à jour le lien symbolique pour HyprPanel
-ln -sf "$WALLPAPER" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -q
@@ -78,20 +69,33 @@ else
     exit 1
 fi
 
+#faire une copie du wallpaper actuel
 cp $WALLPAPER /tmp/caca.png
 
 # Passe le matugen d'HyprPanel en mode sombre
 HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
 jq '.["theme.matugen_settings.mode"]="dark"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
 
-#Gérer l'image du menu de gestion des Wallpapers
-input="/tmp/caca.png"
-outpute="/tmp/cacae.png"
-output="/tmp/cacae.png"
-#magick "$input" -resize 70% "$output" || { echo "magick a échoué"; exit 1; }
-magick "$input" -resize 30% "$outpute" || { echo "magick a échoué"; exit 1; }
+# suprimer l'image qui casse les couilles
+rm -f /tmp/cacae-0.png
 
-#Relancer HyprPanel mais finalement on en a pas besoin car matugen fait tout le taf
+# Créer une version PNG du fond d'écran
+INPUT="$WALLPAPER"
+TMP_MAIN="/tmp/caca.png"
+TMP_SMALL="/tmp/cacae.png"
+
+# Si c'est un GIF, ne prendre que la première frame
+if [[ "$INPUT" =~ \.gif$ ]]; then
+    magick "$INPUT[0]" "$TMP_MAIN" || { echo "Erreur conversion GIF -> PNG"; exit 1; }
+else
+    cp "$INPUT" "$TMP_MAIN"
+fi
+
+# Redimensionner les images PNG
+#magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
+magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
+
+#Relancer HyprPanel
 hyprpanel -q
 hyprpanel &
 

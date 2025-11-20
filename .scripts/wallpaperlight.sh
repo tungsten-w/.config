@@ -1,4 +1,5 @@
 #!/bin/bash
+# ouvre le wallpaper actuel en image
 nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/light"
@@ -43,7 +44,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "Sélectionner un fond d'écran" \
+done | rofi -dmenu -p "~ Select a wallpaper ~   " \
            -show-icons -icon-theme "Papirus" \
            -theme ~/.config/rofi/wallpaper.rasi)
 
@@ -55,13 +56,6 @@ fi
 
 # Reconstruire le chemin complet de l'image sélectionnée
 WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
-
-# Vérifier si swww-daemon est en cours d'exécution
-if ! pgrep -x "swww-daemon" > /dev/null; then
-    echo "Démarrage de swww-daemon..."
-    swww-daemon &
-    sleep 1  # Attendre que le démon démarre
-fi
 
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
@@ -78,7 +72,7 @@ fi
 # faire la copie du wallpaper actuel
 cp $WALLPAPER /tmp/caca.png
 
-# Passe le matugen en mode clair
+# Passe le matugen d'HyprPanel en mode clair
 HYRPPANEL_CONF="$HOME/.config/hyprpanel/config.json"
 jq '.["theme.matugen_settings.mode"]="light"' "$HYRPPANEL_CONF" > "$HYRPPANEL_CONF.tmp" && mv "$HYRPPANEL_CONF.tmp" "$HYRPPANEL_CONF"
 
