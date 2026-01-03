@@ -1,0 +1,6 @@
+configuration {
+    show-icons: true;  // Activer les icônes
+    font: "Comfortaa 15";  // Police Nerd Fonts avec taille 14pt
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"  // Importer les couleurs Pywal
