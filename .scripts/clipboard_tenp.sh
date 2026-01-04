@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # fichier temporaire pour l'historique
 HISTFILE="/tmp/clipboard_history.txt"
 touch "$HISTFILE"

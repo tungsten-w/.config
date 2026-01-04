@@ -1,6 +1,39 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"  // Importer les couleurs Pywal
+
 configuration {
-    show-icons: true;  // Activer les icônes
-    font: "Comfortaa 15";  // Police Nerd Fonts avec taille 14pt
+    font: "Comfortaa 20";  // Police Nerd Fonts avec taille 14pt
 }
 
-@import "~/.cache/wal/colors-rofi-dark.rasi"  // Importer les couleurs Pywal
+window {
+    width: 998px;
+    height: 470px;
+    location: center;
+    border: 1px;
+    border-radius: 20px;
+    background-color:@background ;  // 50% de transparence #00000080
+     border-color: #ffffff;
+    transparency: "real";
+    padding: 15px; /* Espace autour du contenu de la fenêtre */
+}
+
+element {
+    padding: 2px;
+    text-color: @active-background;
+    background-color:  #00000080;
+    border-radius: 8px;
+    border: 1px ;
+}
+
+element-text {
+    text-color: @active-background;
+}
+#listview {
+    border-color: @border-color;
+    scrollbar: true;
+    padding: 0px;
+    spacing: 10px; /* Espace entre les éléments */
+    columns: 2; /* Ajoute 2 colonnes */
+    border: 3px;
+    border-radius: 20px;
+    lines: 10;
+}
