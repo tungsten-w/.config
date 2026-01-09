@@ -1,1 +1,12 @@
-{}
+{
+  "custom/pc_status": {
+    "label": "{status} ",
+    "tooltip": "statut server",
+    "execute": "/home/tungsten/.config/.scripts/check_pc.sh",
+    "executeOnAction": "wakeonlan 00:11:22:33:44:55",
+    "interval": 10000,
+    "actions": {
+      "onLeftClick": "wakeonlan 00:11:22:33:44:55"
+    }
+  }
+}

@@ -44,3 +44,6 @@
 theme = "/home/tungsten/.cache/wal/colors-ghostty"
 background-opacity = 0.9
 background-blur = true
+
+#the widows will close without confirmation => false or true
+confirm-close-surface = false

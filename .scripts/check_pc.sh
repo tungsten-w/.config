@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOST="100.74.187.3"
+HOST="100.86.82.121"
 
 if ping -c 1 -W 1 $HOST &>/dev/null; then
     echo '{"icon":"on","status":"󰣳"}'

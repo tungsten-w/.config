@@ -1,7 +1,8 @@
 {
   "bar.customModules.storage.paths": [
     "/",
-    "/mnt/ssd2"
+    "/mnt/ssd2",
+    "/home/tungsten/mnt/nas"
   ],
   "theme.matugen": true,
   "theme.matugen_settings.mode": "dark",
@@ -40,7 +41,6 @@
     "1": {
       "left": [
         "dashboard",
-        "custom/pc_status",
         "cpu",
         "ram",
         "cputemp",
@@ -189,5 +189,6 @@
   "bar.clock.showTime": true,
   "theme.osd.active_monitor": true,
   "bar.customModules.cava.stereo": false,
-  "bar.media.show_active_only": false
+  "bar.media.show_active_only": false,
+  "bar.customModules.storage.tooltipStyle": "percentage-bar"
 }
