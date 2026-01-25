@@ -1,11 +1,10 @@
 {
   "bar.customModules.storage.paths": [
     "/",
-    "/mnt/ssd2",
-    "/home/tungsten/mnt/nas"
+    "/mnt/ssd2"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "light",
+  "theme.matugen_settings.mode": "dark",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",
