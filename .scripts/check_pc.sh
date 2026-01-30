@@ -19,7 +19,7 @@ fi
 
 # Logique d'affichage
 if $ping1 && $ping2; then
-    echo '{"icon":"both","status":"󰒋"}'   # les deux connectées
+    echo '{"icon":"both","status":"󰒍"}'   # les deux connectées
 elif $ping1; then
     echo '{"icon":"host1","status":"󰣳"}' # machine 1 seule
 elif $ping2; then
