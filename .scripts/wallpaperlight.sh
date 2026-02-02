@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # kill the first image .config/.scripts/wallpaperimage.sh
 pkill -f feh
 # ouvre le wallpaper actuel en image
