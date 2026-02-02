@@ -1,6 +1,11 @@
 #!/bin/bash
+
+ # kill the first image .config/.scripts/wallpaperimage.sh
+pkill -f feh
+
 #ouvre le wallpaper actuel en image
 nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
+
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/dark"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
@@ -57,6 +62,9 @@ fi
 # Reconstruire le chemin complet de l'image sélectionnée
 WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 
+# tuer l'image .config/.scripts/wallpaperimage.sh
+pkill -f feh
+
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 120
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
@@ -91,7 +99,6 @@ else
 fi
 
 # Redimensionner les images PNG
-#magick "$TMP_MAIN" -resize 70% "$TMP_MAIN" || { echo "Erreur redimensionnement"; exit 1; }
 magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
 
 #Relancer HyprPanel

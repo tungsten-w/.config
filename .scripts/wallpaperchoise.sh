@@ -54,4 +54,4 @@ case "$CHOIX" in
   ;;
 esac
 
-killall feh
+pkill -f feh

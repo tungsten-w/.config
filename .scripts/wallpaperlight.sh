@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# kill the first image .config/.scripts/wallpaperimage.sh
+pkill -f feh
 # ouvre le wallpaper actuel en image
 nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 # Chemin vers le dossier contenant les fonds d'écran
@@ -59,6 +62,9 @@ WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
+
+# tuer l'image .config/.scripts/wallpaperimage.sh
+pkill -f feh
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -l -q
