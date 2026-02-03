@@ -65,7 +65,7 @@ WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 pkill -f feh
 
 # Changer le fond d'écran avec swww
-swww img "$WALLPAPER" --transition-type any --transition-fps 120
+swww img "$WALLPAPER" --transition-type any --transition-fps 60
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -q
 if [ $? -eq 0 ]; then

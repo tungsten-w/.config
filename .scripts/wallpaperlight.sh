@@ -59,11 +59,10 @@ fi
 # Reconstruire le chemin complet de l'image sélectionnée
 WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 
-# Changer le fond d'écran avec swww
-swww img "$WALLPAPER" --transition-type any --transition-fps 60
-
 # tuer l'image .config/.scripts/wallpaperimage.sh
 pkill -f feh
+# Changer le fond d'écran avec swww
+swww img "$WALLPAPER" --transition-type any --transition-fps 60
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -l -q
