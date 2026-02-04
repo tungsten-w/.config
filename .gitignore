@@ -32,3 +32,5 @@
 !/hyprpanel/**
 !/hyprpanel/*
 !/hyprpanel/
+
+!.tmux.conf
