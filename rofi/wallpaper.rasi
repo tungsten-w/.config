@@ -7,7 +7,7 @@ configuration {
 
 element-icon {
     size: 120px; /* Augmente la taille des icônes */
-    border: 2px;
+    border: 3px;
     border-radius: 100px;
     padding: 0px;
     margin: -30px 0px -30px 0px;
@@ -22,7 +22,7 @@ window {
     border: 1px;
     border-radius: 20px;
     background-color:@background ;  // 50% de transparence #00000080
-     border-color: #ffffff;
+    border-color: #ffffff;
     transparency: "real";
     padding: 15px; /* Espace autour du contenu de la fenêtre */
 }
@@ -30,14 +30,15 @@ element {
     padding: 2px;
     text-color: @active-background;
     background-color:  #00000080;
-    border-radius: 8px;
-    border: 1px ;
+    border-radius: 20px;
+    border: 2px ;
 }
 element-text {
     text-color: @active-background;
     horizontal-align: 0.5; /* Centre le texte horizontalement */
     vertical-align: 0.5; /* Centre verticalement (si supporté) */
-    border: 0px;
+    border: 2px;
+    border-color: #ffffff;
     border-radius: 2px;
     enabled: false; /* This will hide the wallpaper titles */
 }
