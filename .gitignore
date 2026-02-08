@@ -35,6 +35,6 @@
 
 !.tmux.conf
 
-!/wallpaper/**
-!/wallpaper/*
-!/wallpaper/
+!/wallpapers/**
+!/wallpapers/*
+!/wallpapers/
