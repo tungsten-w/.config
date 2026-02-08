@@ -3,7 +3,7 @@ HELLO EVERYONE this is my hyprland and endeavour os config
 This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 
 ⤷HERE my rice config on a youtube video ! =^◕⩊◕^=
-https://youtu.be/sOuPnnDND1Y
+https://youtu.be/sOuPnnDND1Y and 
 https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 ⤷HERE some screenshots ! °˖✧♡⸜(˶˃ ᵕ ˂˶)⸝♡✧˖°
