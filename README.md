@@ -14,7 +14,7 @@ there is 4 choise:
 - 🌙 the dark theme
 - 💡 the script that allows you to change your wallpaper depending on the time
 - ⛄the script that allows you to change your wallpaper depending on the season
-![Menu demo](https://github.com/tungsten-w/.config/raw/main/videos/menu.gif)
+![Menu demo](https://github.com/tungsten-w/.config/raw/main/videos/menu2.gif)
 
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
