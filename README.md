@@ -18,6 +18,7 @@ there is 4 choise:
 ![image alt](https://github.com/tungsten-w/.config/blob/602dec450c8eee711f4f4eb774f9adca96cfc082/2025-11-01-120414_hyprshot.png)
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
+i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbnail
 ![image alt](https://github.com/tungsten-w/.config/blob/8574cf6231fc4740ece4639b88680f8a6ac99a93/2025-11-11-200946_hyprshot.png)
 
 ⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
