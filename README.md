@@ -14,7 +14,7 @@ there is 4 choise:
 - 🌙 the dark theme
 - 💡 the script that allows you to change your wallpaper depending on the time
 - ⛄the script that allows you to change your wallpaper depending on the season
-https://www.youtube.com/watch?v=_wneH-t7oyM
+[!demo](https://youtu.be/sOuPnnDND1Y)
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
 i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbnail
