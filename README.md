@@ -9,6 +9,12 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 ⤷HERE some screenshots ! °˖✧♡⸜(˶˃ ᵕ ˂˶)⸝♡✧˖°
 
 ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
+there is 4 choise:
+- 󰖨 the light theme
+-  the dark theme
+- 󱠃 the script that allows you to change your wallpaper depending on the time
+- 󱩹 the script that allows you to change your wallpaper depending on the season
+
 ![image alt](https://github.com/tungsten-w/.config/blob/602dec450c8eee711f4f4eb774f9adca96cfc082/2025-11-01-120414_hyprshot.png)
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
