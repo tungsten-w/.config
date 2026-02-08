@@ -4,6 +4,7 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 
 ⤷HERE my rice config on a youtube video ! =^◕⩊◕^=
 https://youtu.be/sOuPnnDND1Y
+https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 ⤷HERE some screenshots ! °˖✧♡⸜(˶˃ ᵕ ˂˶)⸝♡✧˖°
 
@@ -22,21 +23,5 @@ https://youtu.be/sOuPnnDND1Y
 
 ⤷HERE this is my acual hyprlock look ! there is a true cava and it shows the title of the song and the rythm !\(0v0)/
 ![image alt](https://github.com/tungsten-w/.config/blob/de5387abac39d41071bfa545f71d1e0864496806/2025-11-11-200226_hyprshot.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 I USE ARCH BTW
 (づ｡◕‿‿◕｡)づ
