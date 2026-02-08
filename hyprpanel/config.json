@@ -4,7 +4,7 @@
     "/mnt/ssd2"
   ],
   "theme.matugen": true,
-  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
   "theme.font.name": "Comfortaa",

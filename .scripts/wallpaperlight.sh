@@ -1,20 +1,22 @@
 #!/bin/bash
 # kill the first image .config/.scripts/wallpaperimage.sh
 pkill -f feh
-# ouvre le wallpaper actuel en image
-nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
+
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/light"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
+
+#lancer  le script de reco
+nohup .config/.scripts/wallpaper_recognition.sh "$WALLPAPER_DIR" &
 
 # Créer le dossier pour les vignettes s'il n'existe pas
 mkdir -p "$THUMBNAIL_DIR"
 
 # Vérifier si le dossier des fonds d'écran existe
-if [ ! -d "$WALLPAPER_DIR" ]; then
-    echo "Erreur : Le dossier $WALLPAPER_DIR n'existe pas."
-    exit 1
-fi
+#if [ ! -d "$WALLPAPER_DIR" ]; then
+#    echo "Erreur : Le dossier $WALLPAPER_DIR n'existe pas."
+#    exit 1
+#fi
 
 # Vérifier si le dossier contient des images (hors vignettes)
 if [ -z "$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
@@ -31,9 +33,11 @@ while IFS= read -r img; do
         magick "$img[0]" -thumbnail 100x100\> -strip "$thumb" 2>/dev/null \
             || echo "Erreur création vignette pour $img"
     fi
-
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
+
+# ouvre le wallpaper actuel en image
+nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 
 # Utiliser Rofi pour sélectionner un fond d'écran avec aperçu
 declare -A displayed  # Tableau associatif pour suivre nom+extension
@@ -46,7 +50,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "~ Select a wallpaper ~   " \
+done | rofi -dmenu -p "~ Select a wallpaper ~  ⏾ " \
            -show-icons -icon-theme "Papirus" \
            -theme ~/.config/rofi/wallpaper.rasi)
 
@@ -61,6 +65,7 @@ WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 
 # tuer l'image .config/.scripts/wallpaperimage.sh
 pkill -f feh
+
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
 
@@ -109,4 +114,4 @@ pkill -f ulauncher
 #changer le theme de obsidian en light
 pkill -f -i obsidian || pkill -f "flatpak run md.obsidian.Obsidian" || true; sleep 0.5
 VAULT_APP="$HOME/Documents/Obsidian Vault/.obsidian/app.json"; VAULT_APPEAR="$HOME/Documents/Obsidian Vault/.obsidian/appearance.json"
-jq '.baseTheme = "light"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "moonstone"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR"
+jq '.baseTheme = "light"' "$VAULT_APP" > "$VAULT_APP.tmp" && mv "$VAULT_APP.tmp" "$VAULT_APP" && jq '.theme = "moonstone"' "$VAULT_APPEAR" > "$VAULT_APPEAR.tmp" && mv "$VAULT_APPEAR.tmp" "$VAULT_APPEAR"]

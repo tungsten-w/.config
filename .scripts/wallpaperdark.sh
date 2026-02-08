@@ -2,21 +2,21 @@
 # kill the first image .config/.scripts/wallpaperimage.sh
 pkill -f feh
 
-#ouvre le wallpaper actuel en image
-nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
-
 # Chemin vers le dossier contenant les fonds d'écran
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/dark"
 THUMBNAIL_DIR="$WALLPAPER_DIR/.thumbnails"
+
+#lancer  le script de ro
+nohup .config/.scripts/wallpaper_recognition.sh "$WALLPAPER_DIR" &
 
 # Créer le dossier pour les vignettes s'il n'existe pas
 mkdir -p "$THUMBNAIL_DIR"
 
 # Vérifier si le dossier des fonds d'écran existe
-if [ ! -d "$WALLPAPER_DIR" ]; then
-    echo "Erreur : Le dossier $WALLPAPER_DIR n'existe pas."
-    exit 1
-fi
+#if [ ! -d "$WALLPAPER_DIR" ]; then
+#    echo "Erreur : Le dossier $WALLPAPER_DIR n'existe pas."
+#    exit 1
+#fi
 
 # Vérifier si le dossier contient des images (hors vignettes)
 if [ -z "$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
@@ -33,9 +33,11 @@ while IFS= read -r img; do
         convert "$img[0]" -resize 100x100 "$thumb" 2>/dev/null \
             || echo "Erreur de conversion pour $img"
     fi
-
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
+
+#ouvre le wallpaper actuel en image
+nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 
 # Utiliser Rofi pour sélectionner un fond d'écran avec aperçu
 declare -A displayed  # Tableau associatif pour suivre nom+extension
@@ -48,7 +50,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "~ Select a wallpaper ~   " \
+done | rofi -dmenu -p "~ Select a wallpaper ~  ☀︎ " \
            -show-icons -icon-theme "Papirus" \
            -theme ~/.config/rofi/wallpaper.rasi)
 
@@ -66,6 +68,7 @@ pkill -f feh
 
 # Changer le fond d'écran avec swww
 swww img "$WALLPAPER" --transition-type any --transition-fps 60
+
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -q
 if [ $? -eq 0 ]; then
