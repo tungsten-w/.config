@@ -10,8 +10,8 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
-- 󰖨 the light theme
--  the dark theme
+- ☼ the light theme
+- ☼ the dark theme
 - 󱠃 the script that allows you to change your wallpaper depending on the time
 - 󱩹 the script that allows you to change your wallpaper depending on the season
 
