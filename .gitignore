@@ -34,3 +34,7 @@
 !/hyprpanel/
 
 !.tmux.conf
+
+!/wallpaper/**
+!/wallpaper/*
+!/wallpaper/
