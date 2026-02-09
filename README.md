@@ -1,17 +1,19 @@
 # .config
-HELLO EVERYONE this is my hyprland and endeavour os config
-This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 
-⤷HERE my rice config on a youtube video ! =^◕⩊◕^=
-https://youtu.be/sOuPnnDND1Y and 
-https://www.youtube.com/watch?v=l8ZEnw9vxhk
+# ❄️ Tungsten Hyprland Setup
+
+A minimal, keyboard-driven Wayland setup  
+Built for Hyprland • Optimized for Framework Laptop
+This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 
-
+⤷HERE my rice config on a youtube video ! =^◕⩊◕^=
+https://youtu.be/sOuPnnDND1Y and 
+https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 #### ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
@@ -24,11 +26,12 @@ there is 4 choise:
 
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
-i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbnail
+
 ![image alt](https://github.com/tungsten-w/.config/blob/8574cf6231fc4740ece4639b88680f8a6ac99a93/2025-11-11-200946_hyprshot.png)
 
 
 ⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
+
 ⤷HERE THE LIGHT THEME ! ˗ˏˋ ★ ˎˊ˗
 ![image alt](https://github.com/tungsten-w/.config/blob/main/videos/blackwhite.png)
 
