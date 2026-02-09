@@ -11,9 +11,11 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 
-⤷HERE my rice config on a youtube video ! =^◕⩊◕^=
-https://youtu.be/sOuPnnDND1Y and 
-https://www.youtube.com/watch?v=l8ZEnw9vxhk
+## Videos
+
+- [Rice overview](https://youtu.be/sOuPnnDND1Y)
+- [Workflow & details](https://www.youtube.com/watch?v=l8ZEnw9vxhk)
+
 
 #### ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
@@ -53,7 +55,7 @@ Clone and symlink what you need
 - You: need some basic knowledge of linux and how to use the terminal ^^
 ## Keybindings (main)
 - Super + Enter → Terminal
-- Super + D → Rofi
+- Super + space → Ulauncher
 - Super + W → Wallpaper menu
 - Super + L → Lock screen
 ## Requirements
