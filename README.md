@@ -40,7 +40,8 @@ I USE ARCH BTW
 (づ｡◕‿‿◕｡)づ
 
 ## Installation
-### ⚠️Disclamer⚠️ This repo is not a one-click install.
+### ⚠️Disclamer this repo is not a one-click install.
 It is meant as a reference or base for your own setup.
 Clone and symlink what you need
+
 (i'm trying to make a one click install)
