@@ -13,8 +13,8 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 
 ## Videos
 
-- [Rice overview](https://youtu.be/sOuPnnDND1Y)
-- [Workflow & details](https://www.youtube.com/watch?v=l8ZEnw9vxhk)
+- [Rice overview](https://www.youtube.com/watch?v=l8ZEnw9vxhk)
+- [Workflow & details](https://youtu.be/sOuPnnDND1Y)
 
 
 #### ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
@@ -49,10 +49,12 @@ Clone and symlink what you need
 (i'm trying to make a one click install)
 - [ ] One-click install script
 - [ ] Documentation cleanup
-## Compatibility
-- OS: EndeavourOS (Arch-based)
-- WM: Hyprland
+## Compatibility/Who is this for?
+- OS : EndeavourOS (Arch-based)
+- WM : Hyprland
 - You: need some basic knowledge of linux and how to use the terminal ^^
+- Keyboard-driven workflows lovers
+- Not recommended for Linux beginners
 ## Keybindings (main)
 - Super + Enter → Terminal
 - Super + space → Ulauncher
