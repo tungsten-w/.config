@@ -28,10 +28,9 @@ i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbna
 
 
 ⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
-![image alt](https://github.com/tungsten-w/.config/blob/58d001c962d4c0cf4d809898b4d10fd3f4b9ab8e/2025-11-01-121312_hyprshot.png)
 
 ⤷HERE THE LIGHT THEME ! ˗ˏˋ ★ ˎˊ˗
-![image alt](https://github.com/tungsten-w/.config/blob/58d001c962d4c0cf4d809898b4d10fd3f4b9ab8e/2025-11-01-121435_hyprshot.png)
+![image alt](https://github.com/tungsten-w/.config/blob/main/videos/blackwhite.png)
 
 
 ⤷HERE this is my acual hyprlock look ! there is a true cava and it shows the title of the song and the rythm !\(0v0)/
