@@ -32,3 +32,12 @@ i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbna
 ![image alt](https://github.com/tungsten-w/.config/blob/de5387abac39d41071bfa545f71d1e0864496806/2025-11-11-200226_hyprshot.png)
 I USE ARCH BTW
 (づ｡◕‿‿◕｡)づ
+
+## Structure
+
+.config/
+├── hypr/        # Hyprland config
+├── waybar/      # Waybar modules & style
+├── rofi/        # Launcher themes
+├── ghostty/     # Terminal config
+├── swww/        # Wallpapers & scripts
