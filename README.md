@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
-![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop-black)
+![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop-orange)
 
 
 
