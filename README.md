@@ -27,19 +27,6 @@ i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbna
 ![image alt](https://github.com/tungsten-w/.config/blob/8574cf6231fc4740ece4639b88680f8a6ac99a93/2025-11-11-200946_hyprshot.png)
 
 
-## Stack
-
-| Component   | Tool |
-|------------|------|
-| WM         | Hyprland |
-| Bar        | Hyprpanel |
-| Launcher   | Rofi |
-| Terminal   | Ghostty |
-| Shell      | Bash |
-| Theme      | GTK + nwg-look |
-
-
-
 ⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
 ![image alt](https://github.com/tungsten-w/.config/blob/58d001c962d4c0cf4d809898b4d10fd3f4b9ab8e/2025-11-01-121312_hyprshot.png)
 
@@ -52,11 +39,8 @@ i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbna
 I USE ARCH BTW
 (づ｡◕‿‿◕｡)づ
 
-## Structure
-
-.config/
-├── hypr/        # Hyprland config
-├── waybar/      # Waybar modules & style
-├── rofi/        # Launcher themes
-├── ghostty/     # Terminal config
-├── swww/        # Wallpapers & scripts
+## Installation
+### ⚠️Disclamer⚠️ This repo is not a one-click install.
+It is meant as a reference or base for your own setup.
+Clone and symlink what you need
+(i'm trying to make a one click install)
