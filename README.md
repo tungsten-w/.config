@@ -6,6 +6,10 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 https://youtu.be/sOuPnnDND1Y and 
 https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
+![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
+![Wayland](https://img.shields.io/badge/Display-Wayland-green)
+
+
 ⤷HERE some screenshots ! °˖✧♡⸜(˶˃ ᵕ ˂˶)⸝♡✧˖°
 
 ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
