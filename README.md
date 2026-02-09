@@ -20,7 +20,7 @@ there is 4 choise:
 - 🌞 the light theme
 - 🌙 the dark theme
 - 💡 the script that allows you to change your wallpaper depending on the time
-- 🏔 the script that allows you to change your wallpaper depending on the season
+- ❄️ the script that allows you to change your wallpaper depending on the season
 
 ![Menu demo](https://github.com/tungsten-w/.config/raw/main/videos/menu2.gif)
 
@@ -30,9 +30,7 @@ there is 4 choise:
 ![image alt](https://github.com/tungsten-w/.config/blob/8574cf6231fc4740ece4639b88680f8a6ac99a93/2025-11-11-200946_hyprshot.png)
 
 
-⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
-
-⤷HERE THE LIGHT THEME ! ˗ˏˋ ★ ˎˊ˗
+⤷ here the light theme\and the dark theme
 ![image alt](https://github.com/tungsten-w/.config/blob/main/videos/blackwhite.png)
 
 
@@ -49,14 +47,15 @@ Clone and symlink what you need
 (i'm trying to make a one click install)
 - [ ] One-click install script
 - [ ] Documentation cleanup
-
+## Compatibility
+- OS: EndeavourOS (Arch-based)
+- WM: Hyprland
+- You: need some basic knowledge of linux and how to use the terminal ^^
 ## Keybindings (main)
-
 - Super + Enter → Terminal
 - Super + D → Rofi
 - Super + W → Wallpaper menu
 - Super + L → Lock screen
-
 ## Requirements
 - Hyprland
 - Rofi
