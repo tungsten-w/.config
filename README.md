@@ -9,12 +9,11 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
-![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop-orange)
+![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 
 
 
-
-⤷ ⌞This is my menu for choose between my wallpapers themes⌝
+# ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
 - 🌞 the light theme
 - 🌙 the dark theme
@@ -45,3 +44,25 @@ It is meant as a reference or base for your own setup.
 Clone and symlink what you need
 
 (i'm trying to make a one click install)
+- [ ] One-click install script
+- [ ] Documentation cleanup
+
+## Keybindings (main)
+
+- Super + Enter → Terminal
+- Super + D → Rofi
+- Super + W → Wallpaper menu
+- Super + L → Lock screen
+
+## Requirements
+- Hyprland
+- Rofi
+- hyprpanel/Waybar
+- Ghostty
+- feh
+- swww
+- hyprlock
+- cava
+- playerctl
+- grim / slurp / hyprshot
+- nwg-look
