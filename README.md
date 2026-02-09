@@ -8,9 +8,11 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
+![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
+![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop-black)
 
 
-⤷HERE some screenshots ! °˖✧♡⸜(˶˃ ᵕ ˂˶)⸝♡✧˖°
+
 
 ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
@@ -28,7 +30,6 @@ i use feh for show the actual wallpaper and rofi for the menu i aslo use thumbna
 
 
 ⤷HERE THE DARK THEME ! ˗ˏˋ ⏾ ˎˊ˗
-
 ⤷HERE THE LIGHT THEME ! ˗ˏˋ ★ ˎˊ˗
 ![image alt](https://github.com/tungsten-w/.config/blob/main/videos/blackwhite.png)
 
