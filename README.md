@@ -13,7 +13,7 @@ https://www.youtube.com/watch?v=l8ZEnw9vxhk
 
 
 
-# ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
+#### ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
 there is 4 choise:
 - 🌞 the light theme
 - 🌙 the dark theme
