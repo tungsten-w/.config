@@ -121,3 +121,12 @@ output="/tmp/cacae-0.png"
 
 # Redimensionner l'image
 magick "$input" -resize 25% "$output" || { echo "magick a échoué"; exit 1; }
+
+
+#!/bin/bash
+
+gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-mocha-red-standard+default'
+gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+notify-send "🌙 Thème sombre activé"
