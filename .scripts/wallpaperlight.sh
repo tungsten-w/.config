@@ -67,7 +67,7 @@ WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 pkill -f feh
 
 # Changer le fond d'écran avec swww
-swww img "$WALLPAPER" --transition-type any --transition-fps 60
+swww img "$WALLPAPER" --transition-type any --transition-fps 60 --transition-duration 1
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -l -q
@@ -126,8 +126,8 @@ magick "$input" -resize 25% "$output" || { echo "magick a échoué"; exit 1; }
 
 
 # GTK theme
-gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-latte-maroon-standard+default'
-gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+#gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-latte-maroon-standard+default'
+#gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+#gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 notify-send "🌞 Thème clair activé"

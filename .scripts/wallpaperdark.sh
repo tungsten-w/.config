@@ -50,7 +50,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "~ Select a wallpaper ~  ☀︎ " \
+done | rofi -dmenu -p "~ Select a wallpaper ~   " \
            -show-icons -icon-theme "Papirus" \
            -theme ~/.config/rofi/wallpaper.rasi)
 
@@ -67,7 +67,7 @@ WALLPAPER="$WALLPAPER_DIR/$WALLPAPER"
 pkill -f feh
 
 # Changer le fond d'écran avec swww
-swww img "$WALLPAPER" --transition-type any --transition-fps 60
+swww img "$WALLPAPER" --transition-type any --transition-fps 60 --transition-duration 1
 
 # Appliquer les couleurs avec pywal (inchangé, comme tu veux)
 wal -i "$WALLPAPER" -q
@@ -123,10 +123,10 @@ output="/tmp/cacae-0.png"
 magick "$input" -resize 25% "$output" || { echo "magick a échoué"; exit 1; }
 
 
-#!/bin/bash
 
-gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-mocha-red-standard+default'
-gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+# GTK theme
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
+#gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 notify-send "🌙 Thème sombre activé"
