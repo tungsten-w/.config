@@ -10,6 +10,7 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Videos
 
