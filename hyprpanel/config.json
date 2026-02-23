@@ -42,8 +42,8 @@
         "dashboard",
         "cpu",
         "ram",
-        "cputemp",
         "storage",
+        "cputemp",
         "windowtitle"
       ],
       "middle": [
@@ -110,7 +110,7 @@
   "bar.customModules.cpuTemp.unit": "metric",
   "bar.customModules.storage.labelType": "used/total",
   "bar.customModules.storage.round": false,
-  "bar.customModules.weather.label": true,
+  "bar.customModules.weather.label": false,
   "bar.customModules.weather.unit": "imperial",
   "bar.workspaces.show_icons": true,
   "bar.workspaces.monitorSpecific": false,
@@ -121,7 +121,7 @@
   "bar.windowtitle.custom_title": true,
   "bar.windowtitle.class_name": true,
   "bar.windowtitle.label": false,
-  "bar.volume.label": true,
+  "bar.volume.label": false,
   "bar.network.label": false,
   "bar.bluetooth.label": false,
   "bar.battery.label": false,
@@ -190,5 +190,9 @@
   "theme.osd.active_monitor": true,
   "bar.customModules.cava.stereo": false,
   "bar.media.show_active_only": false,
-  "bar.customModules.storage.tooltipStyle": "percentage-bar"
+  "bar.customModules.storage.tooltipStyle": "percentage-bar",
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "bar.customModules.cpu.rightClick": "",
+  "bar.customModules.cpu.leftClick": "",
+  "bar.customModules.cpuTemp.label": true
 }

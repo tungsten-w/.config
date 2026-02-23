@@ -128,5 +128,3 @@ magick "$input" -resize 25% "$output" || { echo "magick a échoué"; exit 1; }
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 #gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-notify-send "🌙 Thème sombre activé"

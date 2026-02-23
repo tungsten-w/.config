@@ -126,8 +126,6 @@ magick "$input" -resize 25% "$output" || { echo "magick a échoué"; exit 1; }
 
 
 # GTK theme
-#gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-latte-maroon-standard+default'
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk'
 #gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
-#gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-
-notify-send "🌞 Thème clair activé"
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
