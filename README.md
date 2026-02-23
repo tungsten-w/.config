@@ -1,6 +1,4 @@
-# .config
-
-# ❄️ Tungsten Hyprland Setup
+# Tungsten Hyprland Setup
 
 A minimal, keyboard-driven Wayland setup  
 Built for Hyprland • Optimized for Framework Laptop
@@ -73,3 +71,7 @@ Clone and symlink what you need
 - playerctl
 - grim / slurp / hyprshot
 - nwg-look
+
+# License
+This configuration is 100% free under the MIT license.
+Do whatever you want with it: use, copy, modify, share… anything goes!
