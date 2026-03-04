@@ -7,6 +7,7 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
 ![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
+![CachyOS](https://img.shields.io/badge/OS-CachyOS-green)
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
