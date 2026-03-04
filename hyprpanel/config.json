@@ -1,14 +1,14 @@
 {
   "bar.customModules.storage.paths": [
     "/",
-    "/mnt/ssd2"
+    "/home/"
   ],
   "theme.matugen": true,
   "theme.matugen_settings.mode": "light",
   "wallpaper.enable": false,
   "wallpaper.image": "/tmp/caca.png",
-  "theme.font.name": "Ubuntu Nerd Font",
-  "theme.font.label": "Adwaita Mono",
+  "theme.font.name": "Comfortaa",
+  "theme.font.label": "Comfortaa Bold",
   "theme.bar.location": "top",
   "menus.dashboard.powermenu.avatar.image": "/tmp/caca.png",
   "bar.layouts": {
