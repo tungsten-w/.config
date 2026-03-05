@@ -1,5 +1,5 @@
 #!/bin/bash
-nohup "/home/tungsten/.config/.scripts/wallpaperimage0.sh"
+#nohup "/home/tungsten/.config/.scripts/wallpaperimage0.sh"
 
 # Fonction pour déterminer la saison
 get_saison() {
@@ -14,7 +14,7 @@ get_saison() {
 }
 
 # Ton menu avec 4 options
-CHOIX=$(echo -e "\n\n󱠃\n󱩹" | rofi -dmenu -p "     Wallpaper theme " -theme ~/.config/rofi/wallpaperchoise.rasi)
+CHOIX=$(echo -e "\n\n󱠃\n󱩹" | rofi -dmenu -theme ~/.config/rofi/wallpaperchoise.rasi)
 
 case "$CHOIX" in
 "")

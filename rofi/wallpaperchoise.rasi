@@ -11,14 +11,16 @@ element-icon {
 }
 
 window {
-    width: 800px;
-    height: 250px;
+    width: 700px;
+    height: 159px;
     location: center;
-    border: 4px;
+    border: 3px;
     border-radius: 20px;
     border-color: @active-background;
     transparency: "real";
     padding: 15px; /* Espace autour du contenu de la fenêtre */
+     background-image:         url("/tmp/caca.png", width);
+
 }
 
 #listview {
@@ -28,23 +30,23 @@ window {
     padding: 1px;
     spacing: 10px; /* Espace entre les éléments */
     columns: 2; /* Ajoute 2 colonnes */
-    border: 3px;
-    border-radius: 20px;
+    border: 8px;
+    border-radius: 200px;
     lines: 0;
 }
 
 element {
     padding: 10px;
     text-color: @active-background;
-    background-color:  #00000080;
-    border-radius: 8px;
-    border: 2px ;
+    border-radius: 800px;
+    border: 0px ;
 }
 
 element-text {
-    text-color: @active-background;
+    text-color: @foreground;
     horizontal-align: 0.45; /* Centre le texte horizontalement */
     vertical-align: 0.45; /* Centre verticalement (si supporté) */
+
     border: 9px;
     border-radius: 50px;
     }
@@ -54,4 +56,35 @@ mainbox {
     spacing: 10px; /* Space between elements */
     horizontal-align: 0.45; /* Centre le texte horizontalement */
     vertical-align: 0.45; /* Centre verticalement (si supporté) */
+    border-radius: 500px;
+}
+
+inputbar {
+    enabled:                     false;
+    spacing:                     10px;
+    padding:                     100px 60px;
+    background-color:            transparent;
+    background-image:         url("/tmp/caca.png", width);
+    text-color:                  #151514; /* from pywal */
+    orientation:                 horizontal;
+    border-radius: 10px;
+    children:                    [ "idk", "dummy", "mode-switcher" ];
+    border-color:                @foreground; /* Then define color */
+    border: 1px;
+}
+
+idk {
+    enabled: true;
+    spacing:                     10px;
+    padding:                     10px 60px;
+    background-color:
+    transparent;
+    text-color:                  #151514; /* from pywal */
+    orientation:                 vertical;
+    children:                    [ "search-icon-whatever", "entry" ];
+}
+
+dummy {
+    expand:                      true;
+    background-color:            transparent;
 }

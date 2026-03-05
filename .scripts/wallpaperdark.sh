@@ -30,14 +30,14 @@ while IFS= read -r img; do
     base_name=$(basename "${img%.*}")
     thumb="$THUMBNAIL_DIR/$base_name.png"
     if [ ! -f "$thumb" ]; then
-        convert "$img[0]" -resize 100x100 "$thumb" 2>/dev/null \
+        convert "$img[0]" -resize 600x600 "$thumb" 2>/dev/null \
             || echo "Erreur de conversion pour $img"
     fi
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
 
 #ouvre le wallpaper actuel en image
-nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
+#nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 
 # Utiliser Rofi pour sélectionner un fond d'écran avec aperçu
 declare -A displayed  # Tableau associatif pour suivre nom+extension
@@ -50,9 +50,7 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o
             echo -en "$(basename "$img")\0icon\x1f$THUMBNAIL_DIR/$base_name.png\n"
             displayed[$key]=1
         fi
-done | rofi -dmenu -p "~ Select a wallpaper ~   " \
-           -show-icons -icon-theme "Papirus" \
-           -theme ~/.config/rofi/wallpaper.rasi)
+done | rofi -dmenu -show-icons -icon-theme "Papirus"  -theme ~/.config/rofi/wallpaper.rasi)
 
 # Vérifier si une image a été sélectionnée
 if [ -z "$WALLPAPER" ]; then
@@ -101,7 +99,7 @@ else
 fi
 
 # Redimensionner les images PNG
-magick "$TMP_MAIN" -resize 30% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
+magick "$TMP_MAIN" -resize 10% "$TMP_SMALL" || { echo "Erreur redimensionnement"; exit 1; }
 
 #Relancer HyprPanel
 hyprpanel -q

@@ -30,14 +30,14 @@ while IFS= read -r img; do
     base_name=$(basename "${img%.*}")
     thumb="$THUMBNAIL_DIR/$base_name.png"
     if [ ! -f "$thumb" ] || [ "$thumb" -ot "$img" ]; then
-        magick "$img[0]" -thumbnail 100x100\> -strip "$thumb" 2>/dev/null \
+        magick "$img[0]" -thumbnail 600x600\> -strip "$thumb" 2>/dev/null \
             || echo "Erreur création vignette pour $img"
     fi
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
     -not -path "$THUMBNAIL_DIR/*")
 
 # ouvre le wallpaper actuel en image
-nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
+#nohup "/home/tungsten/.config/.scripts/wallpaperimage.sh"
 
 # Utiliser Rofi pour sélectionner un fond d'écran avec aperçu
 declare -A displayed  # Tableau associatif pour suivre nom+extension
