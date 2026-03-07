@@ -30,7 +30,7 @@ while IFS= read -r img; do
     base_name=$(basename "${img%.*}")
     thumb="$THUMBNAIL_DIR/$base_name.png"
     if [ ! -f "$thumb" ]; then
-        convert "$img[0]" -resize 600x600 "$thumb" 2>/dev/null \
+        convert "$img[0]" -resize 900x900 "$thumb" 2>/dev/null \
             || echo "Erreur de conversion pour $img"
     fi
 done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) \
