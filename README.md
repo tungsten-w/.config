@@ -29,7 +29,7 @@ there is 4 choise:
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
 
-![image alt](https://github.com/tungsten-w/.config/blob/8574cf6231fc4740ece4639b88680f8a6ac99a93/2025-11-11-200946_hyprshot.png)
+![image alt](https://github.com/tungsten-w/.config/blob/main/2026-03-07-212902_hyprshot.png)
 
 
 ⤷ here the light theme\and the dark theme
