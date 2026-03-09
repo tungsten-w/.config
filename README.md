@@ -84,3 +84,5 @@ Clone and symlink what you need
 # License
 This configuration is 100% free under the MIT license.
 Do whatever you want with it: use, copy, modify, share… anything goes!
+
+tungsten.W
