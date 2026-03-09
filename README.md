@@ -32,7 +32,7 @@ there is 4 choise:
 - 💡 the script that allows you to change your wallpaper depending on the time
 - ❄️ the script that allows you to change your wallpaper depending on the season
 
-![Menu demo](https://github.com/tungsten-w/.config/raw/main/videos/menu2.gif)
+![Menu demo](https://github.com/tungsten-w/.config/raw/main/videos/menu3.gif)
 
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
