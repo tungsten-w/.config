@@ -1,5 +1,10 @@
 <div align="center">
+
 # ✦ Tungsten Hyprland Setup ✦
+
+<br>
+    
+</div>
 
 A minimal, keyboard-driven Wayland setup  
 Built for Hyprland • Optimized for Framework Laptop
@@ -12,7 +17,7 @@ This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<br>
+
 
 ## Videos
 
