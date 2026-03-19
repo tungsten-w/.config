@@ -98,7 +98,7 @@
   "theme.osd.location": "top right",
   "theme.osd.orientation": "horizontal",
   "bar.customModules.hyprsunset.label": false,
-  "bar.customModules.hyprsunset.temperature": "3000k",
+  "bar.customModules.hyprsunset.temperature": "2500k",
   "bar.customModules.hyprsunset.onIcon": "󱩌",
   "bar.customModules.hyprsunset.offIcon": "󰛨",
   "theme.matugen_settings.variation": "standard_3",
