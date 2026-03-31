@@ -17,15 +17,8 @@ if [ -z "$WALLPAPER" ]; then
     exit 1
 fi
 
-# Vérifier si swww-daemon est en cours d'exécution
-if ! pgrep -x "swww-daemon" > /dev/null; then
-    echo "Démarrage de swww-daemon..."
-    swww-daemon &
-    sleep 1
-fi
-
-# Changer le fond d'écran avec swww
-swww img "$WALLPAPER" --transition-type any --transition-fps 60
+# Changer le fond d'écran avec awww
+awww img "$WALLPAPER" --transition-type any --transition-fps 60
 
 # Mettre à jour le lien symbolique pour HyprPanel
 ln -sf "$WALLPAPER" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
