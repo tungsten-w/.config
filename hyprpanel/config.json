@@ -203,5 +203,10 @@
   "menus.dashboard.directories.right.directory1.label": "󱧶  Documents",
   "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/Projects/\"",
   "theme.bar.buttons.bluetooth.enableBorder": false,
-  "theme.font.style": "normal"
+  "theme.font.style": "normal",
+  "theme.notification.enableShadow": true,
+  "theme.notification.shadow": "0px 1px 2px 1px #16161e",
+  "notifications.showActionsOnHover": true,
+  "notifications.position": "bottom right",
+  "menus.clock.weather.enabled": true
 }
