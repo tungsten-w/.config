@@ -149,7 +149,7 @@
   "menus.dashboard.shortcuts.right.shortcut3.command": "obsidian",
   "menus.dashboard.shortcuts.right.shortcut3.tooltip": "obsidian",
   "menus.dashboard.shortcuts.right.shortcut1.icon": "",
-  "menus.dashboard.shortcuts.right.shortcut1.command": ".config/.scripts/wallpaperbar.sh",
+  "menus.dashboard.shortcuts.right.shortcut1.command": " .config/.scripts/wallpaper_time.sh",
   "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Wallpaper",
   "terminal": "$TERM",
   "bar.workspaces.applicationIconOncePerWorkspace": true,
