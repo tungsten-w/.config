@@ -84,7 +84,7 @@ apply_all() {
     pkill -f feh
 
     # Wallpaper
-    awww img "$wallpaper" --transition-type any --transition-fps 60 --transition-duration 1
+    awww img "$wallpaper" --transition-type any --transition-fps 60 --transition-duration 0.7
     ln -sf "$wallpaper" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
     # Pywal
@@ -141,13 +141,13 @@ case "$CHOIX" in
         ;;
     "󱠃")  # Heure — random, dark si soir/nuit
         MOMENT=$(get_moment_journee)
-        WP=$(pick_random "$HOME/Pictures/Wallpapers/$MOMENT")
+        WP=$(pick_random "$HOME/Pictures/Wallpapers/season-time/$MOMENT")
         [[ "$MOMENT" == "night" || "$MOMENT" == "sunset" ]] && DARK=true || DARK=false
         apply_all "$WP" $DARK
         ;;
     "󱩹")  # Saison — random, light
         SAISON=$(get_saison)
-        WP=$(pick_random "$HOME/Pictures/Wallpapers/$SAISON")
+        WP=$(pick_random "$HOME/Pictures/Wallpapers/season-time/$SAISON")
         apply_all "$WP" false
         ;;
     *)
