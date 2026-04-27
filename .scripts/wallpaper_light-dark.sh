@@ -82,9 +82,9 @@ apply_all() {
     fi
 
     pkill -f feh
-
+type random --transition
     # Wallpaper
-    awww img "$wallpaper" --transition-type any --transition-fps 60 --transition-duration 0.7
+    awww img "$wallpaper" --transition-type random --transition-fps 60 --transition-duration 0.7
     ln -sf "$wallpaper" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
     # Pywal
@@ -101,11 +101,19 @@ apply_all() {
     magick /tmp/caca.png -resize 25% /tmp/cacae-0.png
 
     # HyprPanel
-    HYPRPANEL_CONF="$HOME/.config/hyprpanel/config.json"
-    jq ".\"theme.matugen_settings.mode\"=\"$matugen_mode\"" "$HYPRPANEL_CONF" \
-        > "$HYPRPANEL_CONF.tmp" && mv "$HYPRPANEL_CONF.tmp" "$HYPRPANEL_CONF"
-    hyprpanel -q; hyprpanel &
+    #HYPRPANEL_CONF="$HOME/.config/hyprpanel/config.json"
+    #jq ".\"theme.matugen_settings.mode\"=\"$matugen_mode\"" "$HYPRPANEL_CONF" \
+    #    > "$HYPRPANEL_CONF.tmp" && mv "$HYPRPANEL_CONF.tmp" "$HYPRPANEL_CONF"
+    #hyprpanel -q; hyprpanel &
+    # matugen image "$wallpaper" --mode "$matugen_mode"
 
+    # Noctalia
+    if $dark; then
+        qs -c noctalia-shell ipc call darkMode setDark
+    else
+        qs -c noctalia-shell ipc call darkMode setLight
+    fi
+    qs -c noctalia-shell ipc call wallpaper set "$wallpaper" all
     # Ulauncher
     pkill -f ulauncher
 

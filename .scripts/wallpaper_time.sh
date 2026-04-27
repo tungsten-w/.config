@@ -34,7 +34,7 @@ apply_all() {
 
     pkill -f feh
 
-    awww img "$wallpaper" --transition-type any --transition-fps 60 --transition-duration 1
+    awww img "$wallpaper" --transition-type random --transition-fps 60 --transition-duration 2
     ln -sf "$wallpaper" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
     wal -i "$wallpaper" $wal_flags || { echo "Erreur pywal."; exit 1; }
@@ -48,13 +48,23 @@ apply_all() {
     magick /tmp/caca.png -resize 30% /tmp/cacae.png
     magick /tmp/caca.png -resize 25% /tmp/cacae-0.png
 
-    HYPRPANEL_CONF="$HOME/.config/hyprpanel/config.json"
-    jq ".\"theme.matugen_settings.mode\"=\"$matugen_mode\"" "$HYPRPANEL_CONF" \
-        > "$HYPRPANEL_CONF.tmp" && mv "$HYPRPANEL_CONF.tmp" "$HYPRPANEL_CONF"
-    hyprpanel -q; hyprpanel &
+    #HYPRPANEL_CONF="$HOME/.config/hyprpanel/config.json"
+    #jq ".\"theme.matugen_settings.mode\"=\"$matugen_mode\"" "$HYPRPANEL_CONF" \
+    #    > "$HYPRPANEL_CONF.tmp" && mv "$HYPRPANEL_CONF.tmp" "$HYPRPANEL_CONF"
+    #hyprpanel -q; hyprpanel &
 
+    # Noctalia
+    if $dark; then
+        qs -c noctalia-shell ipc call darkMode setDark
+    else
+        qs -c noctalia-shell ipc call darkMode setLight
+    fi
+    qs -c noctalia-shell ipc call wallpaper set "$wallpaper" all
+
+    # Ulauncher
     pkill -f ulauncher
 
+    # obsidian
     pkill -f -i obsidian || true; sleep 0.5
     VAULT_APP="$HOME/Documents/Obsidian Vault/.obsidian/app.json"
     VAULT_APPEAR="$HOME/Documents/Obsidian Vault/.obsidian/appearance.json"
@@ -68,6 +78,6 @@ apply_all() {
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 MOMENT=$(get_moment_journee)
-WP=$(pick_random "$HOME/Pictures/Wallpapers/$MOMENT")
+WP=$(pick_random "$HOME/Pictures/Wallpapers/season-time/$MOMENT")
 [[ "$MOMENT" == "night" || "$MOMENT" == "sunset" ]] && DARK=true || DARK=false
 apply_all "$WP" $DARK

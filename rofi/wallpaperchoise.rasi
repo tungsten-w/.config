@@ -12,7 +12,7 @@ element-icon {
 
 window {
     width: 700px;
-    height: 159px;
+    height: 160px;
     location: center;
     border: 3px;
     border-radius: 20px;
@@ -25,7 +25,7 @@ window {
 
 #listview {
     border-color: @border-color;
-     location: center;
+    location: center;
     scrollbar: false;
     padding: 1px;
     spacing: 10px; /* Espace entre les éléments */
