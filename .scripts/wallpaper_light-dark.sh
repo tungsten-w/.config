@@ -82,9 +82,10 @@ apply_all() {
     fi
 
     pkill -f feh
-type random --transition
+
     # Wallpaper
     awww img "$wallpaper" --transition-type random --transition-fps 60 --transition-duration 0.7
+    sleep 1.5  # laisser la transition se terminer proprement
     ln -sf "$wallpaper" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
     # Pywal
@@ -107,13 +108,24 @@ type random --transition
     #hyprpanel -q; hyprpanel &
     # matugen image "$wallpaper" --mode "$matugen_mode"
 
-    # Noctalia
+    # Noctalia — lance si pas en cours
+    if ! pgrep -f "noctalia-shell" >/dev/null; then
+        nohup qs -c noctalia-shell >/dev/null 2>&1 &
+        sleep 3
+    fi
+
     if $dark; then
         qs -c noctalia-shell ipc call darkMode setDark
     else
         qs -c noctalia-shell ipc call darkMode setLight
     fi
     qs -c noctalia-shell ipc call wallpaper set "$wallpaper" all
+
+        # Spicetify — attend que Noctalia ait régénéré color.ini, puis relance Spotify
+        if pgrep -x spotify >/dev/null; then
+            ( sleep 2 && spicetify restart ) &
+        fi
+
     # Ulauncher
     pkill -f ulauncher
 

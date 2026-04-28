@@ -34,7 +34,8 @@ apply_all() {
 
     pkill -f feh
 
-    awww img "$wallpaper" --transition-type random --transition-fps 60 --transition-duration 2
+    awww img "$wallpaper" --transition-type random --transition-fps 60 --transition-duration 0.6
+    sleep 2.5  # laisser la transition se terminer proprement
     ln -sf "$wallpaper" "$HOME/Pictures/Wallpapers/current_wallpaper.jpg"
 
     wal -i "$wallpaper" $wal_flags || { echo "Erreur pywal."; exit 1; }
