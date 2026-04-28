@@ -42,3 +42,7 @@
 !/videos/**
 !/videos/*
 !/videos/
+
+!/noctalia/**
+!/noctalia/*
+!noctalia/
