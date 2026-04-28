@@ -55,7 +55,7 @@ It is meant as a reference or base for your own setup.
 Clone and symlink what you need
 
 (i'm trying to make a one click install)
-- [ ] One-click install script → See [INSTALL.md](./INSTALL.md) for the installer documentation.
+- [ ] One-click install script → See [INSTALL.md](./install-w/INSTALL.md) for the installer documentation.
 - [ ] Documentation cleanup
 ## Compatibility/Who is this for?
 - OS : EndeavourOS (Arch-based)
