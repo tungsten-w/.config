@@ -7,12 +7,12 @@
 </div>
 
 A minimal, keyboard-driven Wayland setup  
-Built for Hyprland • Optimized for Framework Laptop
+This is built for Hyprland • Optimized for Framework Laptop
 This is my current setup, so I'm constantly improving it. \(๑ᵔᗜᵔ๑)/
+This configuration may works only on a arch-based distro.
 
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue)
 ![Wayland](https://img.shields.io/badge/Display-Wayland-green)
-![EndeavourOS](https://img.shields.io/badge/OS-EndeavourOS-purple)
 ![CachyOS](https://img.shields.io/badge/OS-CachyOS-green)
 ![Framework Laptop](https://img.shields.io/badge/Hardware-Framework%20Laptop16-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -37,7 +37,7 @@ there is 4 choise:
 
 ⤷ ⌞This is my menu for choose between my wallpapers⌝
 
-![image alt](https://github.com/tungsten-w/.config/blob/main/2026-03-07-212902_hyprshot.png)
+![image alt](https://github.com/tungsten-w/.config/blob/main/videos/2026-03-07-212902_hyprshot.png)
 
 
 ⤷ here the light theme\and the dark theme

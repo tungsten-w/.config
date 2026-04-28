@@ -46,3 +46,7 @@
 !/noctalia/**
 !/noctalia/*
 !noctalia/
+
+!/install-w/**
+!/install-w/*
+!/install-w/
