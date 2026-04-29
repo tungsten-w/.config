@@ -61,7 +61,7 @@ fish_add_path ~/.config/.scripts
 
 ---
 
-## Usage
+## Usage 🩷
 
 ```bash
 git clone https://github.com/tungsten-w/.config ~/.config
@@ -100,3 +100,4 @@ hyprctl reload
 - The script uses `set -e`: it stops immediately if any critical command fails.
 - Symlinking means updates from `git pull` are applied automatically — no need to re-run the installer.
 - This installer does **not** set up Fish config, Spicetify, or Hyprpanel themes. Those are manual steps documented in the main README.
+- if you have any problem during the instlalation process you can dm me on discord: ```@tungsten.inc```
