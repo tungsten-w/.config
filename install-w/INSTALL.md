@@ -1,4 +1,4 @@
-# install.sh
+# Installation process
 
 > Automated dotfiles installer for Tungsten's Hyprland setup.
 > Handles package installation, config symlinking, and script setup in one run.
@@ -7,7 +7,7 @@
 
 ## Requirements
 
-- An Arch-based distro (CachyOS, EndeavourOS, Manjaro...)
+- An Arch-based distro (CachyOS, EndeavourOS, Manjaro, Arch, Garuda)
 - `paru` or `yay` installed (required only if you want to install packages)
 - Bash 5+
 
@@ -65,7 +65,8 @@ fish_add_path ~/.config/.scripts
 
 ```bash
 git clone https://github.com/tungsten-w/.config ~/.config
-cd ~/.config
+cd ~/.config/install-w
+chmod +x install.sh
 bash install.sh
 ```
 
@@ -75,6 +76,9 @@ Then follow the prompt:
 Install AUR packages? [y/N]
 ```
 
+```
+Install hyprpanel as main bar [y/N]
+```
 Answer `y` to install everything, `N` to only set up symlinks and scripts.
 
 ---
@@ -89,6 +93,7 @@ hyprctl reload
 ```
 
 ---
+
 
 ## Notes
 

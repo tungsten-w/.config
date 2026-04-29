@@ -17,16 +17,13 @@
 
 show_banner() {
 cat << "EOF"
-_                         _
-| |                       | |
-| |_ _   _ _ __   __ _ ___| |_ ___ _ __
-| __| | | | '_ \ / _` / __| __/ _ \ '_ \
-| |_| |_| | | | | (_| \__ \ ||  __/ | | |
-\__|\__,_|_| |_|\__, |___/\__\___|_|  |_|©
-                 __/ |
-                |___/
-        Tungsten Dotfiles Installer  \(ovo)/
-
+.__                 __         .__  .__             __      __
+|__| ____   _______/  |______  |  | |  |           /  \    /  \
+|  |/    \ /  ___/\   __\__  \ |  | |  |    ______ \   \/\/   /
+|  |   |  \\___ \  |  |  / __ \|  |_|  |__ /_____/  \        /
+|__|___|  /____  > |__| (____  /____/____/           \__/\  /
+        \/     \/            \/                           \/
+dotfiles created by Tungsten \(ovo)/
 EOF
 }
 
@@ -39,7 +36,7 @@ PACKAGES=(
     ttf-jetbrains-mono-nerd
 )
 
-# ── Couleurs ────────────────────────────────────────────
+# ── Colors ────────────────────────────────────────────
 GREEN='\033[0;32m'; YELLOW='\033[1;33m'; RED='\033[0;31m'; NC='\033[0m'
 info()    { echo -e "${GREEN}[✓]${NC} $1"; }
 warn()    { echo -e "${YELLOW}[!]${NC} $1"; }
@@ -81,6 +78,13 @@ stow_configs() {
     for dir in hypr hyprpanel rofi ghostty awww; do  # awww cohérent avec PACKAGES
         link_config "$dir"
     done
+    if [[ "$bar_ans" =~ ^[yY]$ ]]; then
+        info "Setting up HyprPanel..."
+        link_config "hyprpanel"
+    else
+        info "Setting up Noctalia..."
+        link_config "noctalia"
+    fi
     ln -sfn "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 }
 
@@ -97,6 +101,9 @@ install_scripts() {
 show_banner
 read -rp "Install AUR packages? [y/N] " ans
 [[ "$ans" =~ ^[yY]$ ]] && install_packages
+
+read -rp "Use HyprPanel as main status bar? [y/N] (N = Noctalia) " bar_ans
+
 stow_configs
 install_scripts
 info "Done! Relaunch Hyprland to apply. Thanks for using these dotfiles ❤"
