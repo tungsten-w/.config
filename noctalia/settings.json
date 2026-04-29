@@ -65,7 +65,7 @@
         "mouseWheelWrap": true,
         "outerCorners": true,
         "position": "top",
-        "reverseScroll": false,
+        "reverseScroll": true,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
         "rightClickFollowMouse": false,
@@ -486,7 +486,7 @@
         "language": "",
         "lockOnSuspend": true,
         "lockScreenAnimations": true,
-        "lockScreenBlur": 0.2,
+        "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],

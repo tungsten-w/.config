@@ -25,7 +25,7 @@ This configuration may works only on a arch-based distro.
 - [Workflow & details](https://youtu.be/sOuPnnDND1Y)
 
 
-#### ⤷ ⌞This is my menu for choose between my wallpapers themes⌝
+#### ⤷ ⌞This is my menu to choose between my wallpaper themes⌝
 there is 4 choise:
 - 🌞 the light theme
 - 🌙 the dark theme
@@ -55,19 +55,22 @@ It is meant as a reference or base for your own setup.
 Clone and symlink what you need
 
 (i'm trying to make a one click install)
-- [ ] One-click install script → See [INSTALL.md](./install-w/INSTALL.md) for the installer documentation.
+- [ ] One-click install script → See [INSTALL.md](./install-w/README.md) for the installer documentation.
 - [ ] Documentation cleanup
 ## Compatibility/Who is this for?
-- OS : EndeavourOS (Arch-based)
+- OS : Arch-based distros
 - WM : Hyprland
 - You: need some basic knowledge of linux and how to use the terminal ^^
 - Keyboard-driven workflows lovers
 - Not recommended for Linux beginners
+- 
 ## Keybindings (main)
 - Super + Enter → Terminal
-- Super + space → Ulauncher
+- Super + Space → Ulauncher
 - Super + W → Wallpaper menu
-- Super + L → Lock screen
+- Super + Esc → Lock screen
+- Super + Q -> quit
+
 ## Requirements
 - Hyprland
 - Rofi
