@@ -1,0 +1,27 @@
+{
+  "panel": {
+    "title": "显示器配置",
+    "no-profile": "无活动配置",
+    "no-profiles": "没有已保存的配置。打开 Monique 以创建一个。",
+    "not-installed": "未找到 monique。请安装 Monique 以使用此插件。"
+  },
+  "actions": {
+    "open-monique": "打开 Monique",
+    "widget-settings": "小部件设置"
+  },
+  "settings": {
+    "title": "Monique",
+    "description": "从状态栏切换显示器配置并自定义外观。",
+    "show-profile-label": "显示配置名称",
+    "show-profile-label-desc": "在状态栏图标旁边显示当前活动配置的名称",
+    "active-color": "图标颜色",
+    "active-color-desc": "状态栏中图标的颜色",
+    "refresh-interval": "刷新间隔",
+    "refresh-interval-desc": "轮询活动配置的频率"
+  },
+  "toast": {
+    "title": "显示器配置",
+    "switched": "已切换至 {profile}",
+    "error": "切换配置失败"
+  }
+}

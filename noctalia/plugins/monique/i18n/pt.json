@@ -1,0 +1,27 @@
+{
+  "panel": {
+    "title": "Perfis de monitor",
+    "no-profile": "Nenhum perfil ativo",
+    "no-profiles": "Nenhum perfil salvo. Abra o Monique para criar um.",
+    "not-installed": "monique não encontrado. Instale o Monique para usar este plugin."
+  },
+  "actions": {
+    "open-monique": "Abrir Monique",
+    "widget-settings": "Configurações do widget"
+  },
+  "settings": {
+    "title": "Monique",
+    "description": "Troque perfis de monitor pela barra e personalize a aparência.",
+    "show-profile-label": "Mostrar nome do perfil",
+    "show-profile-label-desc": "Exibir o nome do perfil ativo ao lado do ícone na barra",
+    "active-color": "Cor do ícone",
+    "active-color-desc": "Cor do ícone na barra",
+    "refresh-interval": "Intervalo de atualização",
+    "refresh-interval-desc": "Com que frequência o perfil ativo é verificado"
+  },
+  "toast": {
+    "title": "Perfis de monitor",
+    "switched": "Alternado para {profile}",
+    "error": "Falha ao trocar de perfil"
+  }
+}

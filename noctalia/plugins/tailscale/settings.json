@@ -1,0 +1,16 @@
+{
+  "refreshInterval": 1000,
+  "compactMode": true,
+  "showIpAddress": false,
+  "showPeerCount": false,
+  "hideDisconnected": false,
+  "hideMullvadExitNodes": true,
+  "terminalCommand": "ghostty",
+  "sshUsername": "oxygen",
+  "pingCount": 5,
+  "defaultPeerAction": "copy-ip",
+  "taildropEnabled": true,
+  "taildropDownloadDir": "~/Downloads",
+  "taildropReceiveMode": "operator",
+  "loginServer": ""
+}

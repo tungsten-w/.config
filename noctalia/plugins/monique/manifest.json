@@ -1,0 +1,31 @@
+{
+  "id": "monique",
+  "name": "Monique",
+  "version": "1.1.0",
+  "minNoctaliaVersion": "4.0.0",
+  "author": "ToRvaLDz",
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "description": "Switch monitor profiles from the bar. Shows the active profile and lets you switch between saved configurations.",
+  "tags": [
+    "Bar",
+    "System",
+    "Panel"
+  ],
+  "entryPoints": {
+    "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "defaultSettings": {
+      "refreshInterval": 5000,
+      "activeColor": "primary",
+      "showProfileLabel": false
+    }
+  }
+}

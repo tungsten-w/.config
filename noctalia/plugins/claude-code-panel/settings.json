@@ -1,0 +1,29 @@
+{
+  "maxHistoryLength": 200,
+  "panelDetached": true,
+  "panelPosition": "right",
+  "panelHeightRatio": 0.9,
+  "panelWidth": 620,
+  "scale": 1,
+  "attachmentStyle": "connected",
+  "claude": {
+    "binary": "claude",
+    "workingDir": "",
+    "model": "",
+    "fallbackModel": "",
+    "permissionMode": "default",
+    "allowedTools": [],
+    "disallowedTools": [],
+    "additionalDirs": [],
+    "mcpConfigPath": "",
+    "appendSystemPrompt": "",
+    "injectNoctaliaContext": true,
+    "includePartialMessages": true,
+    "dangerouslySkipPermissions": false,
+    "sessionId": "",
+    "autoResume": true,
+    "maxTurns": 0,
+    "strictMcpConfig": false,
+    "requireConfirmBypass": true
+  }
+}

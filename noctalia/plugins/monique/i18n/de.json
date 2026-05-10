@@ -1,0 +1,27 @@
+{
+  "panel": {
+    "title": "Monitor-Profile",
+    "no-profile": "Kein aktives Profil",
+    "no-profiles": "Keine Profile gespeichert. Öffne Monique, um eines zu erstellen.",
+    "not-installed": "monique nicht gefunden. Installiere Monique, um dieses Plugin zu nutzen."
+  },
+  "actions": {
+    "open-monique": "Monique öffnen",
+    "widget-settings": "Widget-Einstellungen"
+  },
+  "settings": {
+    "title": "Monique",
+    "description": "Wechsle Monitor-Profile über die Leiste und passe das Erscheinungsbild an.",
+    "show-profile-label": "Profilname anzeigen",
+    "show-profile-label-desc": "Den aktiven Profilnamen neben dem Symbol in der Leiste anzeigen",
+    "active-color": "Symbolfarbe",
+    "active-color-desc": "Farbe des Symbols in der Leiste",
+    "refresh-interval": "Aktualisierungsintervall",
+    "refresh-interval-desc": "Wie oft das aktive Profil abgefragt wird"
+  },
+  "toast": {
+    "title": "Monitor-Profile",
+    "switched": "Gewechselt zu {profile}",
+    "error": "Profilwechsel fehlgeschlagen"
+  }
+}
