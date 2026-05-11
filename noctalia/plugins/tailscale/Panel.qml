@@ -25,6 +25,7 @@ Item {
   property var selectedPeer: null
   property var selectedPeerDelegate: null
   property var sendTargetPeer: null
+  property string searchQuery: ""
 
   NFilePicker {
     id: sendFilePicker
@@ -53,6 +54,30 @@ Item {
   function normalizeFqdn(fqdn) {
     if (!fqdn) return ""
     return fqdn.endsWith(".") ? fqdn.slice(0, -1) : fqdn
+  }
+
+  function peerMatchesSearch(peer, query) {
+    var trimmedQuery = (query || "").trim().toLowerCase()
+    if (trimmedQuery === "") return true
+
+    var ipv4s = filterIPv4(peer?.TailscaleIPs || []).join(" ")
+    var fqdn = normalizeFqdn(peer?.DNSName)
+    var tsName = mainInstance ? mainInstance.tailscaleName(peer?.DNSName) : ""
+    var searchableText = [
+      peer?.HostName || "",
+      fqdn,
+      tsName,
+      ipv4s,
+      peer?.OS || ""
+    ].join(" ").toLowerCase()
+
+    var tokens = trimmedQuery.split(/\s+/)
+    for (var i = 0; i < tokens.length; i++) {
+      if (searchableText.indexOf(tokens[i]) === -1) {
+        return false
+      }
+    }
+    return true
   }
 
   function getOSIcon(os) {
@@ -253,6 +278,11 @@ Item {
     pluginApi?.manifest?.metadata?.defaultSettings?.hideMullvadExitNodes ??
     true
 
+  readonly property bool showSearchBar:
+    pluginApi?.pluginSettings?.showSearchBar ??
+    pluginApi?.manifest?.metadata?.defaultSettings?.showSearchBar ??
+    false
+
   readonly property string terminalCommand:
     pluginApi?.pluginSettings?.terminalCommand ||
     pluginApi?.manifest?.metadata?.defaultSettings?.terminalCommand ||
@@ -305,8 +335,23 @@ Item {
     return peers
   }
 
+  readonly property var filteredPeerList: {
+    var query = searchQuery.trim()
+    if (!showSearchBar || query === "") return sortedPeerList
+    return sortedPeerList.filter(function(peer) {
+      return peerMatchesSearch(peer, query)
+    })
+  }
+
+  readonly property bool searchActive: showSearchBar && searchQuery.trim() !== ""
+  readonly property bool searchHasNoResults:
+    searchActive &&
+    (mainInstance?.tailscaleRunning ?? false) &&
+    sortedPeerList.length > 0 &&
+    filteredPeerList.length === 0
+
   property real contentPreferredWidth: panelReady ? 400 * Style.uiScaleRatio : 0
-  property real contentPreferredHeight: panelReady ? Math.min(560, 260 + sortedPeerList.length * 48) * Style.uiScaleRatio : 0
+  property real contentPreferredHeight: panelReady ? Math.min(620, 310 + sortedPeerList.length * 48) * Style.uiScaleRatio : 0
 
   anchors.fill: parent
 
@@ -481,11 +526,27 @@ Item {
             }
           }
 
+          NTextInput {
+            id: searchInput
+            Layout.fillWidth: true
+            visible: root.showSearchBar && (root.mainInstance?.tailscaleRunning ?? false) && root.sortedPeerList.length > 0
+            placeholderText: root.pluginApi?.tr("panel.search-placeholder")
+            inputIconName: "search"
+            text: root.searchQuery
+            onTextChanged: root.searchQuery = searchInput.text
+
+            Keys.onEscapePressed: {
+              if (searchInput.text !== "") {
+                searchInput.text = ""
+              }
+            }
+          }
+
           Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 1
             color: Qt.alpha(Color.mOnSurface, 0.1)
-            visible: (mainInstance?.tailscaleRunning ?? false) && (mainInstance?.peerList?.length ?? 0) > 0
+            visible: (root.mainInstance?.tailscaleRunning ?? false) && root.sortedPeerList.length > 0
           }
 
           Flickable {
@@ -505,7 +566,7 @@ Item {
               spacing: Style.marginS
 
               Repeater {
-                model: sortedPeerList
+                model: root.filteredPeerList
 
                 delegate: ItemDelegate {
                   id: peerDelegate
@@ -598,8 +659,8 @@ Item {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 Layout.topMargin: Style.marginL
-                text: pluginApi?.tr("panel.no-peers")
-                visible: !(mainInstance?.tailscaleRunning ?? false) || (mainInstance?.peerList?.length ?? 0) === 0
+                text: root.searchHasNoResults ? root.pluginApi?.tr("panel.no-search-results") : root.pluginApi?.tr("panel.no-peers")
+                visible: !(root.mainInstance?.tailscaleRunning ?? false) || root.sortedPeerList.length === 0 || root.searchHasNoResults
                 pointSize: Style.fontSizeM
                 color: Color.mOnSurfaceVariant
                 horizontalAlignment: Text.AlignHCenter

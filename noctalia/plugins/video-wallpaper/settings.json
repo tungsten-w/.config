@@ -1,0 +1,28 @@
+{
+  "activeBackend": "qt6-multimedia",
+  "automationMode": "random",
+  "automationTime": 300,
+  "fillMode": "fit",
+  "mpvSocket": "/tmp/mpv-socket",
+  "profile": "default",
+  "volume": 1,
+  "wallpapersFolder": "/home/tungsten/Pictures/Wallpapers/live-wallpaper",
+  "thumbCacheReady": true,
+  "enabled": false,
+  "monitorSpecific": false,
+  "eDP-2": {
+    "currentWallpaper": "/home/tungsten/Pictures/Wallpapers/live-wallpaper/VxgCn9XI8d-TheLastufUs4kEllie.mp4",
+    "noctaliaWallpaper": "/home/tungsten/Pictures/Wallpapers/dark/tlou-lucioles-green-#green.png",
+    "isPlaying": true
+  },
+  "DP-1": {
+    "currentWallpaper": "/home/tungsten/Pictures/Wallpapers/live-wallpaper/VxgCn9XI8d-TheLastufUs4kEllie.mp4",
+    "noctaliaWallpaper": "/home/tungsten/Pictures/Wallpapers/dark/tlou-lucioles-green-#green.png",
+    "isPlaying": true,
+    "isMuted": false
+  },
+  "HEADLESS-2": {
+    "currentWallpaper": "/home/tungsten/Pictures/Wallpapers/live-wallpaper/VxgCn9XI8d-TheLastufUs4kEllie.mp4",
+    "noctaliaWallpaper": "/home/tungsten/Pictures/Wallpapers/dark/tlou-lucioles-green-#green.png"
+  }
+}

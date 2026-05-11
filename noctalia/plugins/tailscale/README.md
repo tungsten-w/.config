@@ -13,6 +13,7 @@ A Tailscale status plugin for Noctalia that shows your Tailscale connection stat
 - **Peer Count**: Displays the number of connected devices in your tailnet
 - **Quick Toggle**: Click to connect/disconnect Tailscale
 - **Peer Context Menu**: Right-click a peer in the panel to copy its IP or FQDN, launch SSH/ping actions, use it as an exit node, or send a file via Taildrop
+- **Node Search**: Optionally filter the panel node list by hostname, DNS name, Tailscale name, IP address, or OS
 - **Taildrop Receive**: Toggle file receiving from the panel
 - **Exit Node Management**: Activate/deactivate exit nodes from the panel
 - **Context Menu**: Right-click for additional options (connect, disconnect, refresh, settings)
@@ -65,6 +66,7 @@ Right-click any online peer in the panel and choose **Send File**. A file picker
 | `showPeerCount` | `true` | Display the number of connected peers |
 | `hideDisconnected` | `false` | Hide disconnected peers from the panel list |
 | `hideMullvadExitNodes` | `true` | Hide Mullvad VPN exit nodes from the peer list |
+| `showSearchBar` | `false` | Show a search field above the panel node list |
 | `terminalCommand` | `""` | Terminal for SSH/ping (e.g. `ghostty`, `alacritty`) |
 | `sshUsername` | `""` | Username for SSH connections (leave empty for system default) |
 | `pingCount` | `5` | Number of pings to send when pinging a peer |
@@ -99,7 +101,8 @@ qs -c noctalia-shell ipc call plugin:tailscale <command>
 1. **Click** the icon to open the Tailscale panel
 2. **Right-click the bar widget** to open the context menu (connect/disconnect, settings)
 3. **Right-click a peer** in the panel to copy its IP/FQDN, SSH, ping, set as exit node, or send a file
-4. **Receive via Taildrop**: click "Receive via Taildrop" in the panel to fetch any pending incoming files
+4. **Search nodes**: if enabled in settings, type in the panel search box to filter by hostname, DNS name, Tailscale name, IP address, or OS
+5. **Receive via Taildrop**: click "Receive via Taildrop" in the panel to fetch any pending incoming files
 
 ## Troubleshooting
 

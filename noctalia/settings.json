@@ -167,6 +167,9 @@
                             "usePadding": false
                         },
                         {
+                            "id": "plugin:video-wallpaper"
+                        },
+                        {
                             "colorizeSystemIcon": "none",
                             "colorizeSystemText": "none",
                             "customIconPath": "",
@@ -376,25 +379,6 @@
                             "textColor": "none"
                         },
                         {
-                            "defaultSettings": {
-                                "compactMode": false,
-                                "defaultPeerAction": "copy-ip",
-                                "hideDisconnected": false,
-                                "hideMullvadExitNodes": true,
-                                "loginServer": "",
-                                "pingCount": 5,
-                                "refreshInterval": 5000,
-                                "showIpAddress": true,
-                                "showPeerCount": true,
-                                "sshUsername": "",
-                                "taildropDownloadDir": "~/Downloads",
-                                "taildropEnabled": true,
-                                "taildropReceiveMode": "operator",
-                                "terminalCommand": ""
-                            },
-                            "id": "plugin:tailscale"
-                        },
-                        {
                             "applyToAllMonitors": false,
                             "displayMode": "onhover",
                             "iconColor": "none",
@@ -499,6 +483,9 @@
                         {
                             "iconColor": "error",
                             "id": "SessionMenu"
+                        },
+                        {
+                            "id": "plugin:video-wallpaper"
                         }
                     ]
                 }
@@ -699,25 +686,6 @@
                 },
                 {
                     "defaultSettings": {
-                        "compactMode": false,
-                        "defaultPeerAction": "copy-ip",
-                        "hideDisconnected": false,
-                        "hideMullvadExitNodes": true,
-                        "loginServer": "",
-                        "pingCount": 5,
-                        "refreshInterval": 5000,
-                        "showIpAddress": true,
-                        "showPeerCount": true,
-                        "sshUsername": "",
-                        "taildropDownloadDir": "~/Downloads",
-                        "taildropEnabled": true,
-                        "taildropReceiveMode": "operator",
-                        "terminalCommand": ""
-                    },
-                    "id": "plugin:tailscale"
-                },
-                {
-                    "defaultSettings": {
                         "autoStartBreaks": false,
                         "autoStartWork": false,
                         "longBreakDuration": 15,
@@ -734,6 +702,19 @@
                         "showProfileLabel": false
                     },
                     "id": "plugin:monique"
+                },
+                {
+                    "defaultSettings": {
+                        "activeBackend": "qt6-multimedia",
+                        "automationMode": "random",
+                        "automationTime": 300,
+                        "fillMode": "fit",
+                        "mpvSocket": "/tmp/mpv-socket",
+                        "profile": "default",
+                        "volume": 1,
+                        "wallpapersFolder": "~/Pictures/Wallpapers"
+                    },
+                    "id": "plugin:video-wallpaper"
                 }
             ]
         }
@@ -762,8 +743,8 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": false,
-        "generationMethod": "faithful",
+        "darkMode": true,
+        "generationMethod": "content",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
